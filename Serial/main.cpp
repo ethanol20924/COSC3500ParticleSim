@@ -10,15 +10,15 @@ using namespace std;
 #include "libs/cereal/archives/json.hpp"
 
 // SIM SETUP PARAMS
-#define NUM_PARTICLES 20
+#define NUM_PARTICLES 100
 #define BOX_WIDTH 1  // m
 #define BOX_HEIGHT 1  // m
 #define TIMESTEP 0.01  // s
 
 #define SIM_TIME 5  // s
 
-#define PARTICLE_SIZE 0.025  // m
-#define PARTICLE_MASS 1  // kg
+#define PARTICLE_SIZE 0.01  // m
+#define PARTICLE_MASS 0.1  // kg
 #define MAX_PARTICLE_SPEED 0.25  // m/s
 
 #define OUTPUT_FILENAME "../out/test1.json"

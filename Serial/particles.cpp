@@ -53,8 +53,22 @@ void Particles::updateCollisions() {
             // Check that particles are different
             if (it1 != it2) {
                 if (checkCollision(&(*it1), &(*it2))) {
-                    it1->set_dx(it1->get_dx() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dx()) / (it1->get_mass() + it2->get_mass()));
-                    it1->set_dy(it1->get_dy() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dy()) / (it1->get_mass() + it2->get_mass()));
+                    // cout << "Before: " << it1->get_dx() << " | " << it2->get_dx() << "\n";
+
+                    float newXVel1 = (it1->get_dx() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dx())) / (it1->get_mass() + it2->get_mass());
+                    float newXVel2 = (it2->get_dx() * (it2->get_mass() - it1->get_mass()) + (2 * it1->get_mass() * it1->get_dx())) / (it1->get_mass() + it2->get_mass());
+                    float newYVel1 = (it1->get_dy() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dy())) / (it1->get_mass() + it2->get_mass());
+                    float newYVel2 = (it2->get_dy() * (it2->get_mass() - it1->get_mass()) + (2 * it1->get_mass() * it1->get_dy())) / (it1->get_mass() + it2->get_mass());
+
+                    it1->set_dx(newXVel1);
+                    it2->set_dx(newXVel2);
+                    it1->set_dy(newYVel1);
+                    it2->set_dy(newYVel2);
+
+                    it1->update(timeStep);
+                    it2->update(timeStep);
+
+                    // cout << "After: " << it1->get_dx() << " | " << it2->get_dx() << "\n";
                 }
             }
         }
@@ -64,9 +78,9 @@ void Particles::updateCollisions() {
 void Particles::updateMovements() {
     // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
 
-    vector<Particle>::iterator it1;
-    for (it1 = particles.begin(); it1 != particles.end(); it1++) {
-        it1->update(timeStep);
+    vector<Particle>::iterator it;
+    for (it = particles.begin(); it != particles.end(); it++) {
+        it->update(timeStep);
     }
 }
 

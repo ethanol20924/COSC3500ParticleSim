@@ -41,7 +41,7 @@ CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 CMAKE_SOURCE_DIR = /home/s4638706/Documents/COSC3500ParticleSim/Serial
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/s4638706/Documents/COSC3500ParticleSim/Serial/build
+CMAKE_BINARY_DIR = /home/s4638706/Documents/COSC3500ParticleSim/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/particleSim.dir/depend.make
@@ -53,18 +53,18 @@ include CMakeFiles/particleSim.dir/progress.make
 include CMakeFiles/particleSim.dir/flags.make
 
 CMakeFiles/particleSim.dir/main.cpp.o: CMakeFiles/particleSim.dir/flags.make
-CMakeFiles/particleSim.dir/main.cpp.o: ../main.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles $(CMAKE_PROGRESS_1)
+CMakeFiles/particleSim.dir/main.cpp.o: /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles $(CMAKE_PROGRESS_1)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/particleSim.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/particleSim.dir/main.cpp.o -c /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/particleSim.dir/main.cpp.o -c /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp
 
 CMakeFiles/particleSim.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/particleSim.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp > CMakeFiles/particleSim.dir/main.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp > CMakeFiles/particleSim.dir/main.cpp.i
 
 CMakeFiles/particleSim.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/particleSim.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp -o CMakeFiles/particleSim.dir/main.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp -o CMakeFiles/particleSim.dir/main.cpp.s
 
 CMakeFiles/particleSim.dir/main.cpp.o.requires:
 .PHONY : CMakeFiles/particleSim.dir/main.cpp.o.requires
@@ -76,18 +76,18 @@ CMakeFiles/particleSim.dir/main.cpp.o.provides: CMakeFiles/particleSim.dir/main.
 CMakeFiles/particleSim.dir/main.cpp.o.provides.build: CMakeFiles/particleSim.dir/main.cpp.o
 
 CMakeFiles/particleSim.dir/particle.cpp.o: CMakeFiles/particleSim.dir/flags.make
-CMakeFiles/particleSim.dir/particle.cpp.o: ../particle.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles $(CMAKE_PROGRESS_2)
+CMakeFiles/particleSim.dir/particle.cpp.o: /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles $(CMAKE_PROGRESS_2)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/particleSim.dir/particle.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/particleSim.dir/particle.cpp.o -c /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/particleSim.dir/particle.cpp.o -c /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp
 
 CMakeFiles/particleSim.dir/particle.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/particleSim.dir/particle.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp > CMakeFiles/particleSim.dir/particle.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp > CMakeFiles/particleSim.dir/particle.cpp.i
 
 CMakeFiles/particleSim.dir/particle.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/particleSim.dir/particle.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp -o CMakeFiles/particleSim.dir/particle.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp -o CMakeFiles/particleSim.dir/particle.cpp.s
 
 CMakeFiles/particleSim.dir/particle.cpp.o.requires:
 .PHONY : CMakeFiles/particleSim.dir/particle.cpp.o.requires
@@ -99,18 +99,18 @@ CMakeFiles/particleSim.dir/particle.cpp.o.provides: CMakeFiles/particleSim.dir/p
 CMakeFiles/particleSim.dir/particle.cpp.o.provides.build: CMakeFiles/particleSim.dir/particle.cpp.o
 
 CMakeFiles/particleSim.dir/particles.cpp.o: CMakeFiles/particleSim.dir/flags.make
-CMakeFiles/particleSim.dir/particles.cpp.o: ../particles.cpp
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles $(CMAKE_PROGRESS_3)
+CMakeFiles/particleSim.dir/particles.cpp.o: /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles $(CMAKE_PROGRESS_3)
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/particleSim.dir/particles.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/particleSim.dir/particles.cpp.o -c /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/particleSim.dir/particles.cpp.o -c /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp
 
 CMakeFiles/particleSim.dir/particles.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/particleSim.dir/particles.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp > CMakeFiles/particleSim.dir/particles.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp > CMakeFiles/particleSim.dir/particles.cpp.i
 
 CMakeFiles/particleSim.dir/particles.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/particleSim.dir/particles.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp -o CMakeFiles/particleSim.dir/particles.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp -o CMakeFiles/particleSim.dir/particles.cpp.s
 
 CMakeFiles/particleSim.dir/particles.cpp.o.requires:
 .PHONY : CMakeFiles/particleSim.dir/particles.cpp.o.requires
@@ -152,6 +152,6 @@ CMakeFiles/particleSim.dir/clean:
 .PHONY : CMakeFiles/particleSim.dir/clean
 
 CMakeFiles/particleSim.dir/depend:
-	cd /home/s4638706/Documents/COSC3500ParticleSim/Serial/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/s4638706/Documents/COSC3500ParticleSim/Serial /home/s4638706/Documents/COSC3500ParticleSim/Serial /home/s4638706/Documents/COSC3500ParticleSim/Serial/build /home/s4638706/Documents/COSC3500ParticleSim/Serial/build /home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles/particleSim.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/s4638706/Documents/COSC3500ParticleSim/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/s4638706/Documents/COSC3500ParticleSim/Serial /home/s4638706/Documents/COSC3500ParticleSim/Serial /home/s4638706/Documents/COSC3500ParticleSim/build /home/s4638706/Documents/COSC3500ParticleSim/build /home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles/particleSim.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/particleSim.dir/depend
 

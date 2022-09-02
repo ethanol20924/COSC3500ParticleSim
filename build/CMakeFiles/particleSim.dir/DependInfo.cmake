@@ -4,9 +4,9 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
-  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp" "/home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles/particleSim.dir/main.cpp.o"
-  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp" "/home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles/particleSim.dir/particle.cpp.o"
-  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp" "/home/s4638706/Documents/COSC3500ParticleSim/Serial/build/CMakeFiles/particleSim.dir/particles.cpp.o"
+  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/main.cpp" "/home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles/particleSim.dir/main.cpp.o"
+  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/particle.cpp" "/home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles/particleSim.dir/particle.cpp.o"
+  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/particles.cpp" "/home/s4638706/Documents/COSC3500ParticleSim/build/CMakeFiles/particleSim.dir/particles.cpp.o"
   )
 SET(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,7 +16,7 @@ SET(CMAKE_TARGET_LINKED_INFO_FILES
 
 # The include file search paths:
 SET(CMAKE_C_TARGET_INCLUDE_PATH
-  "../libs"
+  "/home/s4638706/Documents/COSC3500ParticleSim/Serial/libs"
   )
 SET(CMAKE_CXX_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})
 SET(CMAKE_Fortran_TARGET_INCLUDE_PATH ${CMAKE_C_TARGET_INCLUDE_PATH})

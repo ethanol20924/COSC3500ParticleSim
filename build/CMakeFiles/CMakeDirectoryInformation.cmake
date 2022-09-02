@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 SET(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/s4638706/Documents/COSC3500ParticleSim/Serial")
-SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/s4638706/Documents/COSC3500ParticleSim/Serial/build")
+SET(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/s4638706/Documents/COSC3500ParticleSim/build")
 
 # Force unix paths in dependencies.
 SET(CMAKE_FORCE_UNIX_PATHS 1)
