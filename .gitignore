@@ -35,6 +35,7 @@
 *.json
 *.xml
 *.bin
+*.err
 
 # CMake
 **/CMakeFiles

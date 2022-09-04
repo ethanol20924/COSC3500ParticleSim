@@ -12,8 +12,8 @@ using namespace std;
 
 // INITIAL SIM SETUP PARAMS
 #define NUM_PARTICLES 100
-#define BOX_WIDTH 1  // m
-#define BOX_HEIGHT 1  // m
+#define BOX_WIDTH 2  // m
+#define BOX_HEIGHT 2  // m
 #define TIMESTEP 0.01  // s
 
 #define SIM_TIME 5  // s
@@ -25,13 +25,14 @@ using namespace std;
 #define OUTPUT_ENABLED false
 #define OUTPUT_FILENAME "../out/test2.json"
 
-#define COUT_TO_FILE false
+#define COUT_TO_FILE false  // Note: we can specify outputs with SLURM script
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
 #define MULTIPLE_SIMS true
 #define NUM_NEW_PARTICLES 100
-#define MAX_PARTICLES 1000
+#define MAX_PARTICLES 2000
+#define REPEAT_SIM 5
 
 int main() {
     #if OUTPUT_ENABLED
@@ -46,46 +47,62 @@ int main() {
 
     #if MULTIPLE_SIMS
     cout << "<<<<< BEGIN BATCH SIMULATION >>>>>" << endl;
+    cout << "Initial particle count: " << NUM_PARTICLES << endl;
+    cout << "Maximum particle count: " << MAX_PARTICLES << endl;
+    cout << "Samples per particle count: " << REPEAT_SIM << endl;
     #endif
 
     for (uint num_particles = NUM_PARTICLES; num_particles <= max_particles; num_particles += NUM_NEW_PARTICLES) {
 
-        auto progStart = chrono::steady_clock::now();
-        auto cumulativeSimTime = chrono::duration<double, milli>(0);
-        uint frames = 0;
+	auto averageTotalTime = chrono::duration<double, milli>(0);
+	auto averageSimTime = chrono::duration<double, milli>(0);
 
-        Particles *particles = new Particles(num_particles, BOX_WIDTH, BOX_HEIGHT, PARTICLE_SIZE, PARTICLE_MASS, MAX_PARTICLE_SPEED, TIMESTEP);
+	for (uint i = 0; i < REPEAT_SIM; i++) {
 
-        {
-            #if OUTPUT_ENABLED
-            ofstream file;
-            file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
-            cereal::JSONOutputArchive oarchive(file);
-            #endif
+	    auto progStart = chrono::steady_clock::now();
+	    auto cumulativeSimTime = chrono::duration<double, milli>(0);
+	    uint frames = 0;
 
-            for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
-                auto frameStart = chrono::steady_clock::now();
+	    Particles *particles = new Particles(num_particles, BOX_WIDTH, BOX_HEIGHT, PARTICLE_SIZE, PARTICLE_MASS, MAX_PARTICLE_SPEED, TIMESTEP);
 
-                particles->updateCollisions();
-                particles->updateMovements();
-                particles->updateTime();
+	    {
+		#if OUTPUT_ENABLED
+		ofstream file;
+		file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
+		cereal::JSONOutputArchive oarchive(file);
+		#endif
 
-                auto frameEnd = chrono::steady_clock::now();
-                auto frameTime = frameEnd - frameStart;
-                cumulativeSimTime += chrono::duration<double, milli>(frameTime);
-                frames++;
+		for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
+		    auto frameStart = chrono::steady_clock::now();
 
-                #if OUTPUT_ENABLED
-                oarchive(*particles);
-                #endif
-            }
-            #if OUTPUT_ENABLED
-            file.close();
-            #endif
-        }
+		    particles->updateCollisions();
+		    particles->updateMovements();
+		    particles->updateTime();
 
-        auto progEnd = chrono::steady_clock::now();
-        auto totalTime = progEnd - progStart;
+		    auto frameEnd = chrono::steady_clock::now();
+		    auto frameTime = frameEnd - frameStart;
+		    cumulativeSimTime += chrono::duration<double, milli>(frameTime);
+		    frames++;
+
+		    #if OUTPUT_ENABLED
+		    oarchive(*particles);
+		    #endif
+		}
+		#if OUTPUT_ENABLED
+		file.close();
+		#endif
+	    }
+
+	    auto progEnd = chrono::steady_clock::now();
+	    auto totalTime = progEnd - progStart;
+
+	    averageTotalTime += chrono::duration<double, milli>(totalTime);
+	    averageSimTime += cumulativeSimTime;
+
+	}
+
+	averageTotalTime /= REPEAT_SIM;
+	averageSimTime /= REPEAT_SIM;
 
         #if COUT_TO_FILE
         freopen(PROFILE_FILENAME,"a",stdout);
@@ -98,11 +115,11 @@ int main() {
         cout << "Height: " << BOX_HEIGHT << "m" << endl;
         cout << "Timestep: " << TIMESTEP << "s" << endl;
         cout << "Simulation time: " << SIM_TIME << "s" << endl;
-        cout << "Total frames: " << frames << endl;
+        cout << "Frames per run: " << (SIM_TIME / TIMESTEP) << endl;
         cout << "----- Timings -----" << endl;
-        cout << "Total execution time: " << chrono::duration<double, milli>(totalTime).count() << "ms" << endl;
-        cout << "Simulation computation time: " << cumulativeSimTime.count() << "ms" << endl;
-        cout << "Average frame time: " << cumulativeSimTime.count() / frames << "ms" << endl;
+        cout << "Average execution time: " << averageTotalTime.count() << "ms" << endl;
+        cout << "Average simulation computation time: " << averageSimTime.count() << "ms" << endl;
+        cout << "Average frame time: " << averageSimTime.count() / (SIM_TIME / TIMESTEP) << "ms" << endl;
         cout << "===== End Profiling =====" << endl;
         cout << endl;
 
