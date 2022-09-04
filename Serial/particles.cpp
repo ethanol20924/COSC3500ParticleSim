@@ -8,12 +8,14 @@ Particles::Particles() {
 
 Particles::Particles(uint number, float width, float height, float particleSize, float particleMass, float maxSpeed, float timeStep) {
     this->timeStep = timeStep;
+    this->width = width;
+    this->height = height;
     
     for (uint i = 0; i < number; i++) {
         bool intersecting = true;
         while (intersecting) {
-            float x = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/width));
-            float y = static_cast <float> (rand()) / (static_cast <float> (RAND_MAX/height));
+            float x = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(width - 2 * particleSize)));
+            float y = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(height - 2 * particleSize)));
             float dx = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
             float dy = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
             Particle *newParticle = new Particle(x, y, dx, dy, particleSize, particleMass);
@@ -80,6 +82,17 @@ void Particles::updateMovements() {
 
     vector<Particle>::iterator it;
     for (it = particles.begin(); it != particles.end(); it++) {
+        float x = it->get_x();
+        float y = it->get_y();
+        float radius = it->get_radius();
+
+        if (x < radius || x > width - radius) {
+            it->set_dx(-1 * it->get_dx());
+        }
+        if (y < radius || y > width - radius) {
+            it->set_dy(-1 * it->get_dy());
+        }
+
         it->update(timeStep);
     }
 }

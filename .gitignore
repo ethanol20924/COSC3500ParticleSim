@@ -35,3 +35,9 @@
 *.json
 *.xml
 *.bin
+
+# CMake
+**/CMakeFiles
+*.cmake
+*/CMakeCache.txt
+*/Makefile

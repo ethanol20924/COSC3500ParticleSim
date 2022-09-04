@@ -13,6 +13,7 @@ class CollideEvent {
     private:
         Particle *affectingParticle;
         Particle *affectedParticle;
+
     public:
         CollideEvent(Particle *affecting, Particle *affected);
 
@@ -27,6 +28,10 @@ class Particles {
 
         float timeStep;
         float currentTime = 0;
+
+        float width;
+        float height;
+
     public:
         Particles();
         Particles(uint number, float width, float height, float particleSize, float particleMass, float maxSpeed, float timeStep);
