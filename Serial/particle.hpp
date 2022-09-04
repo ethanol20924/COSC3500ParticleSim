@@ -2,6 +2,7 @@
 #define PARTICLE_H
 
 #include <cmath>
+#define _USE_MATH_DEFINES
 
 class Particle {
     private:
@@ -23,6 +24,7 @@ class Particle {
         float get_dy() {return dy;}
         float get_mass() { return mass;}
         float get_radius() { return radius;}
+        float get_speed() { return sqrtf(powf(dx, 2.0) + powf(dy, 2.0)); }
 
         void set_dx(float dx) { this->dx = dx; }
         void set_dy(float dy) { this->dy = dy; }

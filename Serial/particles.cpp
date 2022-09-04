@@ -55,14 +55,24 @@ void Particles::updateCollisions() {
                 if (checkCollision(&(*it1), &(*it2))) {
                     // cout << "Before: " << it1->get_dx() << " | " << it2->get_dx() << "\n";
 
-                    float newXVel1 = (it1->get_dx() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dx())) / (it1->get_mass() + it2->get_mass());
-                    float newXVel2 = (it2->get_dx() * (it2->get_mass() - it1->get_mass()) + (2 * it1->get_mass() * it1->get_dx())) / (it1->get_mass() + it2->get_mass());
-                    float newYVel1 = (it1->get_dy() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dy())) / (it1->get_mass() + it2->get_mass());
-                    float newYVel2 = (it2->get_dy() * (it2->get_mass() - it1->get_mass()) + (2 * it1->get_mass() * it1->get_dy())) / (it1->get_mass() + it2->get_mass());
+                    float theta1 = atan2f(it1->get_dy(), it1->get_dx());
+                    float theta2 = atan2f(it2->get_dy(), it2->get_dx());
+                    float phi = atan2f(it1->get_dy() - it2->get_dy(), it1->get_dx() - it2->get_dx());
+                    float speed1 = it1->get_speed();
+                    float speed2 = it2->get_speed();
+
+                    float newXVel1 = ((speed1 * cosf(theta1 - phi) * (it1->get_mass() - it2->get_mass()) + 2 * it2->get_mass() * speed2 * cosf(theta2 - phi)) / (it1->get_mass() + it2->get_mass())) * cosf(phi)
+                                    + speed1 * sinf(theta1 - phi) * cosf(phi + M_PI / 2);
+                    float newYVel1 = ((speed1 * cosf(theta1 - phi) * (it1->get_mass() - it2->get_mass()) + 2 * it2->get_mass() * speed2 * cosf(theta2 - phi)) / (it1->get_mass() + it2->get_mass())) * sinf(phi)
+                                    + speed1 * sinf(theta1 - phi) * sinf(phi + M_PI / 2);
+                    float newXVel2 = ((speed2 * cosf(theta2 - phi) * (it2->get_mass() - it1->get_mass()) + 2 * it1->get_mass() * speed1 * cosf(theta1 - phi)) / (it1->get_mass() + it2->get_mass())) * cosf(phi)
+                                    + speed2 * sinf(theta2 - phi) * cosf(phi + M_PI / 2);
+                    float newYVel2 = ((speed2 * cosf(theta2 - phi) * (it2->get_mass() - it1->get_mass()) + 2 * it1->get_mass() * speed1 * cosf(theta1 - phi)) / (it1->get_mass() + it2->get_mass())) * sinf(phi)
+                                    + speed2 * sinf(theta2 - phi) * sinf(phi + M_PI / 2);
 
                     it1->set_dx(newXVel1);
-                    it2->set_dx(newXVel2);
                     it1->set_dy(newYVel1);
+                    it2->set_dx(newXVel2);
                     it2->set_dy(newYVel2);
 
                     it1->update(timeStep);
@@ -78,9 +88,9 @@ void Particles::updateCollisions() {
 void Particles::updateMovements() {
     // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
 
-    vector<Particle>::iterator it;
-    for (it = particles.begin(); it != particles.end(); it++) {
-        it->update(timeStep);
+    vector<Particle>::iterator p_it;
+    for (p_it = particles.begin(); p_it != particles.end(); p_it++) {
+        p_it->update(timeStep);
     }
 }
 
