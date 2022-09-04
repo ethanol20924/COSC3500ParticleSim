@@ -1,0 +1,48 @@
+===== Performance Profiling =====
+----- Simulation Settings -----
+Number of particles: 100
+Width: 1m
+Height: 1m
+Timestep: 0.01s
+Simulation time: 5s
+Total frames: 500
+----- Timings -----
+Total execution time: 286.463ms
+Simulation computation time: 285.422ms
+Average frame time: 0.570844ms
+===== End Profiling =====
+
+
+
+===== Performance Profiling =====
+----- Simulation Settings -----
+Number of particles: 200
+Width: 1m
+Height: 1m
+Timestep: 0.01s
+Simulation time: 5s
+Total frames: 500
+----- Timings -----
+Total execution time: 923.964ms
+Simulation computation time: 922.466ms
+Average frame time: 1.84493ms
+===== End Profiling =====
+
+
+
+===== Performance Profiling =====
+----- Simulation Settings -----
+Number of particles: 300
+Width: 1m
+Height: 1m
+Timestep: 0.01s
+Simulation time: 5s
+Total frames: 500
+----- Timings -----
+Total execution time: 2038.37ms
+Simulation computation time: 2035.46ms
+Average frame time: 4.07091ms
+===== End Profiling =====
+
+
+
