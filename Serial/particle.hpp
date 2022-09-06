@@ -3,6 +3,10 @@
 
 #include <cmath>
 
+/**
+ * @brief Particle class to represent a single particle.
+ * 
+ */
 class Particle {
     private:
         float x;  // m
