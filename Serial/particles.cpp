@@ -6,6 +6,17 @@ Particles::Particles() {
     this->timeStep = 0.0f;
 }
 
+/**
+ * @brief Construct a new Particles:: Particles object. Will generate Particle:: Particle objects at random locations without overlapping, with a random initial velocity.
+ * 
+ * @param number Number of particles to generate
+ * @param width Width of the simulation space
+ * @param height Height of the simulation space
+ * @param particleSize Size of each particle
+ * @param particleMass Mass of each particle
+ * @param maxSpeed The maximum initial speed
+ * @param timeStep The time step of the simulation
+ */
 Particles::Particles(uint number, float width, float height, float particleSize, float particleMass, float maxSpeed, float timeStep) {
     this->timeStep = timeStep;
     this->width = width;
@@ -42,12 +53,11 @@ Particles::Particles(uint number, float width, float height, float particleSize,
     }
 }
 
+/**
+ * @brief Updates the movements of particles that are colliding.
+ * 
+ */
 void Particles::updateCollisions() {
-    // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
-
-    collisions.clear();  // Clear the array, don't want to deallocate memory for the particles
-
-    // Iterate over everything lol
     vector<Particle>::iterator it1;
     vector<Particle>::iterator it2;
     for (it1 = particles.begin(); it1 != particles.end(); it1++) {
@@ -55,8 +65,7 @@ void Particles::updateCollisions() {
             // Check that particles are different
             if (it1 != it2) {
                 if (checkCollision(&(*it1), &(*it2))) {
-                    // cout << "Before: " << it1->get_dx() << " | " << it2->get_dx() << "\n";
-
+                    // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
                     float newXVel1 = (it1->get_dx() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dx())) / (it1->get_mass() + it2->get_mass());
                     float newXVel2 = (it2->get_dx() * (it2->get_mass() - it1->get_mass()) + (2 * it1->get_mass() * it1->get_dx())) / (it1->get_mass() + it2->get_mass());
                     float newYVel1 = (it1->get_dy() * (it1->get_mass() - it2->get_mass()) + (2 * it2->get_mass() * it2->get_dy())) / (it1->get_mass() + it2->get_mass());
@@ -67,19 +76,20 @@ void Particles::updateCollisions() {
                     it1->set_dy(newYVel1);
                     it2->set_dy(newYVel2);
 
+                    // Update here to ensure particles don't double update
                     it1->update(timeStep);
                     it2->update(timeStep);
-
-                    // cout << "After: " << it1->get_dx() << " | " << it2->get_dx() << "\n";
                 }
             }
         }
     }
 }
 
+/**
+ * @brief Updates the positions of particles. Also checks if particles should bounce off a wall.
+ * 
+ */
 void Particles::updateMovements() {
-    // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
-
     vector<Particle>::iterator it;
     for (it = particles.begin(); it != particles.end(); it++) {
         float x = it->get_x();
@@ -97,10 +107,22 @@ void Particles::updateMovements() {
     }
 }
 
+/**
+ * @brief Increments the simulation by updating the current time.
+ * 
+ */
 void Particles::updateTime() {
     currentTime += timeStep;
 }
 
+/**
+ * @brief Checks for collisions between two particles
+ * 
+ * @param p1 Pointer to first particle
+ * @param p2 Pointer to second particle
+ * @return true 
+ * @return false 
+ */
 bool Particles::checkCollision(Particle *p1, Particle *p2) {
     // AABB collision check
     if (p1->get_x() + p1->get_radius() + p2->get_radius() > p2->get_x()
@@ -117,9 +139,4 @@ bool Particles::checkCollision(Particle *p1, Particle *p2) {
         }
     }
     return false;
-}
-
-CollideEvent::CollideEvent(Particle *affecting, Particle *affected) {
-    affectingParticle = affecting;
-    affectedParticle = affected;
 }

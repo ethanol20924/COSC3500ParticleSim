@@ -9,22 +9,13 @@
 #include <fstream>
 using namespace std;
 
-class CollideEvent {
-    private:
-        Particle *affectingParticle;
-        Particle *affectedParticle;
-
-    public:
-        CollideEvent(Particle *affecting, Particle *affected);
-
-        Particle *getAffecting() { return affectingParticle; }
-        Particle *getAffected() { return affectedParticle; }
-};
-
+/**
+ * @brief Particles class to represent a collection of particles. Handles the calcuations and updating of each particle.
+ * 
+ */
 class Particles {
     private:
         vector<Particle> particles;
-        vector<CollideEvent> collisions;
 
         float timeStep;
         float currentTime = 0;

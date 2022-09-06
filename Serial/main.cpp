@@ -1,5 +1,3 @@
-#include <stdlib.h>
-
 #include <iostream>
 #include <fstream>
 #include <vector>
@@ -22,17 +20,17 @@ using namespace std;
 #define PARTICLE_MASS 0.1  // kg
 #define MAX_PARTICLE_SPEED 0.25  // m/s
 
-#define OUTPUT_ENABLED false
+#define OUTPUT_ENABLED false  // Enable or disable JSON serialisation
 #define OUTPUT_FILENAME "../out/test2.json"
 
 #define COUT_TO_FILE false  // Note: we can specify outputs with SLURM script
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
-#define MULTIPLE_SIMS true
-#define NUM_NEW_PARTICLES 100
-#define MAX_PARTICLES 2000
-#define REPEAT_SIM 5
+#define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
+#define NUM_NEW_PARTICLES 100  // Number of particles to add after each sim
+#define MAX_PARTICLES 2000  // Maximum number of particles allowed
+#define REPEAT_SIM 5  // Number of time to run the same sim for averaging
 
 int main() {
     #if OUTPUT_ENABLED
@@ -50,59 +48,61 @@ int main() {
     cout << "Initial particle count: " << NUM_PARTICLES << endl;
     cout << "Maximum particle count: " << MAX_PARTICLES << endl;
     cout << "Samples per particle count: " << REPEAT_SIM << endl;
+	cout << endl;
     #endif
 
     for (uint num_particles = NUM_PARTICLES; num_particles <= max_particles; num_particles += NUM_NEW_PARTICLES) {
 
-	auto averageTotalTime = chrono::duration<double, milli>(0);
-	auto averageSimTime = chrono::duration<double, milli>(0);
+		auto averageTotalTime = chrono::duration<double, milli>(0);
+		auto averageSimTime = chrono::duration<double, milli>(0);
 
-	for (uint i = 0; i < REPEAT_SIM; i++) {
+		for (uint i = 0; i < REPEAT_SIM; i++) {
 
-	    auto progStart = chrono::steady_clock::now();
-	    auto cumulativeSimTime = chrono::duration<double, milli>(0);
-	    uint frames = 0;
+			auto progStart = chrono::steady_clock::now();
+			auto cumulativeSimTime = chrono::duration<double, milli>(0);
+			uint frames = 0;
 
-	    Particles *particles = new Particles(num_particles, BOX_WIDTH, BOX_HEIGHT, PARTICLE_SIZE, PARTICLE_MASS, MAX_PARTICLE_SPEED, TIMESTEP);
+			Particles *particles = new Particles(num_particles, BOX_WIDTH, BOX_HEIGHT, PARTICLE_SIZE, PARTICLE_MASS, MAX_PARTICLE_SPEED, TIMESTEP);
 
-	    {
-		#if OUTPUT_ENABLED
-		ofstream file;
-		file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
-		cereal::JSONOutputArchive oarchive(file);
-		#endif
+			{
+			#if OUTPUT_ENABLED
+			ofstream file;
+			file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
+			cereal::JSONOutputArchive oarchive(file);
+			#endif
 
-		for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
-		    auto frameStart = chrono::steady_clock::now();
+			for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
+				auto frameStart = chrono::steady_clock::now();
 
-		    particles->updateCollisions();
-		    particles->updateMovements();
-		    particles->updateTime();
+				particles->updateCollisions();
+				particles->updateMovements();
+				particles->updateTime();
 
-		    auto frameEnd = chrono::steady_clock::now();
-		    auto frameTime = frameEnd - frameStart;
-		    cumulativeSimTime += chrono::duration<double, milli>(frameTime);
-		    frames++;
+				// Timing is done here as we don't really want to time the serialisation part
+				auto frameEnd = chrono::steady_clock::now();
+				auto frameTime = frameEnd - frameStart;
+				cumulativeSimTime += chrono::duration<double, milli>(frameTime);
+				frames++;
 
-		    #if OUTPUT_ENABLED
-		    oarchive(*particles);
-		    #endif
+				#if OUTPUT_ENABLED
+				oarchive(*particles);
+				#endif
+			}
+			#if OUTPUT_ENABLED
+			file.close();
+			#endif
+			}
+
+			auto progEnd = chrono::steady_clock::now();
+			auto totalTime = progEnd - progStart;
+
+			averageTotalTime += chrono::duration<double, milli>(totalTime);
+			averageSimTime += cumulativeSimTime;
+
 		}
-		#if OUTPUT_ENABLED
-		file.close();
-		#endif
-	    }
 
-	    auto progEnd = chrono::steady_clock::now();
-	    auto totalTime = progEnd - progStart;
-
-	    averageTotalTime += chrono::duration<double, milli>(totalTime);
-	    averageSimTime += cumulativeSimTime;
-
-	}
-
-	averageTotalTime /= REPEAT_SIM;
-	averageSimTime /= REPEAT_SIM;
+		averageTotalTime /= REPEAT_SIM;
+		averageSimTime /= REPEAT_SIM;
 
         #if COUT_TO_FILE
         freopen(PROFILE_FILENAME,"a",stdout);
