@@ -62,36 +62,45 @@ int main() {
 			auto cumulativeSimTime = chrono::duration<double, milli>(0);
 			uint frames = 0;
 
-			Particles *particles = new Particles(num_particles, BOX_WIDTH, BOX_HEIGHT, PARTICLE_SIZE, PARTICLE_MASS, MAX_PARTICLE_SPEED, TIMESTEP);
+			auto simConfig = new SimConfig_t;
+			simConfig->numParticles = num_particles;
+			simConfig->simWidth = BOX_WIDTH;
+			simConfig->simHeight = BOX_HEIGHT;
+			simConfig->particleSize = PARTICLE_SIZE;
+			simConfig->particleMass = PARTICLE_MASS;
+			simConfig->maxSpeed = MAX_PARTICLE_SPEED;
+			simConfig->timeStep = TIMESTEP;
 
-			{
-			#if OUTPUT_ENABLED
-			ofstream file;
-			file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
-			cereal::JSONOutputArchive oarchive(file);
-			#endif
+			Particles *particles = new Particles(simConfig);
 
-			for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
-				auto frameStart = chrono::steady_clock::now();
+			// {
+			// #if OUTPUT_ENABLED
+			// ofstream file;
+			// file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
+			// cereal::JSONOutputArchive oarchive(file);
+			// #endif
 
-				particles->updateCollisions();
-				particles->updateMovements();
-				particles->updateTime();
+			// for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
+			// 	auto frameStart = chrono::steady_clock::now();
 
-				// Timing is done here as we don't really want to time the serialisation part
-				auto frameEnd = chrono::steady_clock::now();
-				auto frameTime = frameEnd - frameStart;
-				cumulativeSimTime += chrono::duration<double, milli>(frameTime);
-				frames++;
+			// 	particles->updateCollisions();
+			// 	particles->updateMovements();
+			// 	particles->updateTime();
 
-				#if OUTPUT_ENABLED
-				oarchive(*particles);
-				#endif
-			}
-			#if OUTPUT_ENABLED
-			file.close();
-			#endif
-			}
+			// 	// Timing is done here as we don't really want to time the serialisation part
+			// 	auto frameEnd = chrono::steady_clock::now();
+			// 	auto frameTime = frameEnd - frameStart;
+			// 	cumulativeSimTime += chrono::duration<double, milli>(frameTime);
+			// 	frames++;
+
+			// 	#if OUTPUT_ENABLED
+			// 	oarchive(*particles);
+			// 	#endif
+			// }
+			// #if OUTPUT_ENABLED
+			// file.close();
+			// #endif
+			// }
 
 			auto progEnd = chrono::steady_clock::now();
 			auto totalTime = progEnd - progStart;
@@ -116,10 +125,10 @@ int main() {
         cout << "Timestep: " << TIMESTEP << "s" << endl;
         cout << "Simulation time: " << SIM_TIME << "s" << endl;
         cout << "Frames per run: " << (SIM_TIME / TIMESTEP) << endl;
-        cout << "----- Timings -----" << endl;
-        cout << "Average execution time: " << averageTotalTime.count() << "ms" << endl;
-        cout << "Average simulation computation time: " << averageSimTime.count() << "ms" << endl;
-        cout << "Average frame time: " << averageSimTime.count() / (SIM_TIME / TIMESTEP) << "ms" << endl;
+        // cout << "----- Timings -----" << endl;
+        // cout << "Average execution time: " << averageTotalTime.count() << "ms" << endl;
+        // cout << "Average simulation computation time: " << averageSimTime.count() << "ms" << endl;
+        // cout << "Average frame time: " << averageSimTime.count() / (SIM_TIME / TIMESTEP) << "ms" << endl;
         cout << "===== End Profiling =====" << endl;
         cout << endl;
 
