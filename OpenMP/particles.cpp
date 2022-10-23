@@ -7,45 +7,6 @@ Particles::Particles() {
 }
 
 /**
- * @brief Construct a new Particles:: Particles object. Will generate Particle::Particle objects at random locations without overlapping, with a random initial velocity.
- */
-Particles::Particles(uint number, float width, float height, float particleSize, float particleMass, float maxSpeed, float timeStep) {
-    this->timeStep = timeStep;
-    this->width = width;
-    this->height = height;
-    
-    for (uint i = 0; i < number; i++) {
-        bool intersecting = true;
-        while (intersecting) {
-            float x = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(width - 2 * particleSize)));
-            float y = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(height - 2 * particleSize)));
-            float dx = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
-            float dy = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
-            Particle *newParticle = new Particle(x, y, dx, dy, particleSize, particleMass);
-
-            if (particles.empty()) {
-                intersecting = false;
-                particles.push_back(*newParticle);
-            } else {
-                bool isIntersecting = false;
-                vector<Particle>::iterator it;
-                for (it = particles.begin(); it != particles.end(); it++) {
-                    if (checkCollision(newParticle, &(*it))) {
-                        isIntersecting = true;
-                    }
-                }
-                if (!isIntersecting) {
-                    intersecting = false;
-                    particles.push_back(*newParticle);
-                } else {
-                    delete newParticle;
-                }
-            }
-        }
-    }
-}
-
-/**
  * @brief Construct a new Particles:: Particles object
  * 
  * @param config Config structure
@@ -57,6 +18,7 @@ Particles::Particles(SimConfig_t *config) {
 
     uint numParticles = config->numParticles;
     float particleSize = config->particleSize;
+    float particleMass = config->particleMass;
     float maxSpeed = config->maxSpeed;
 
     for (uint i = 0; i < numParticles; i++) {
