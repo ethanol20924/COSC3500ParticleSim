@@ -76,34 +76,34 @@ int main() {
 
 			Particles *particles = new Particles(simConfig);
 
-			// {
-			// #if OUTPUT_ENABLED
-			// ofstream file;
-			// file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
-			// cereal::JSONOutputArchive oarchive(file);
-			// #endif
+			{
+			#if OUTPUT_ENABLED
+			ofstream file;
+			file.open(OUTPUT_FILENAME, fstream::out | fstream::app | ios::binary);
+			cereal::JSONOutputArchive oarchive(file);
+			#endif
 
-			// for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
-			// 	auto frameStart = chrono::steady_clock::now();
+			for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
+				auto frameStart = chrono::steady_clock::now();
 
-			// 	particles->updateCollisions();
-			// 	particles->updateMovements();
-			// 	particles->updateTime();
+				// particles->updateCollisions();
+				// particles->updateMovements();
+				particles->updateTime();
 
-			// 	// Timing is done here as we don't really want to time the serialisation part
-			// 	auto frameEnd = chrono::steady_clock::now();
-			// 	auto frameTime = frameEnd - frameStart;
-			// 	cumulativeSimTime += chrono::duration<double, milli>(frameTime);
-			// 	frames++;
+				// Timing is done here as we don't really want to time the serialisation part
+				auto frameEnd = chrono::steady_clock::now();
+				auto frameTime = frameEnd - frameStart;
+				cumulativeSimTime += chrono::duration<double, milli>(frameTime);
+				frames++;
 
-			// 	#if OUTPUT_ENABLED
-			// 	oarchive(*particles);
-			// 	#endif
-			// }
-			// #if OUTPUT_ENABLED
-			// file.close();
-			// #endif
-			// }
+				#if OUTPUT_ENABLED
+				oarchive(*particles);
+				#endif
+			}
+			#if OUTPUT_ENABLED
+			file.close();
+			#endif
+			}
 
 			auto progEnd = chrono::steady_clock::now();
 			auto totalTime = progEnd - progStart;

@@ -64,6 +64,8 @@ Particles::Particles(SimConfig_t *config) {
     }
 }
 
+
+
 bool Particles::checkCollision(Particle *p1, Particle *p2) {
     // AABB collision check
     if (p1->get_x() + p1->get_radius() + p2->get_radius() > p2->get_x()
