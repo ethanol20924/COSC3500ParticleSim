@@ -12,7 +12,7 @@ using namespace std;
 #define NUM_PARTICLES 100
 #define BOX_WIDTH 2  // m
 #define BOX_HEIGHT 2  // m
-#define NUM_ROWS 0.1  // m
+#define NUM_ROWS 10  // m
 #define TIMESTEP 0.01  // s
 
 #define SIM_TIME 5  // s
@@ -28,10 +28,10 @@ using namespace std;
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
-#define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
+#define MULTIPLE_SIMS false  // Enable batch running multiple simulations one after another
 #define NUM_NEW_PARTICLES 100  // Number of particles to add after each sim
 #define MAX_PARTICLES 2000  // Maximum number of particles allowed
-#define REPEAT_SIM 5  // Number of time to run the same sim for averaging
+#define REPEAT_SIM 1  // Number of time to run the same sim for averaging
 
 int main() {
     #if OUTPUT_ENABLED
@@ -86,8 +86,9 @@ int main() {
 			for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
 				auto frameStart = chrono::steady_clock::now();
 
-				// particles->updateCollisions();
-				// particles->updateMovements();
+				particles->updateGrid();
+				particles->updateCollisions();
+				particles->updateMovements();
 				particles->updateTime();
 
 				// Timing is done here as we don't really want to time the serialisation part
@@ -128,10 +129,10 @@ int main() {
         cout << "Timestep: " << TIMESTEP << "s" << endl;
         cout << "Simulation time: " << SIM_TIME << "s" << endl;
         cout << "Frames per run: " << (SIM_TIME / TIMESTEP) << endl;
-        // cout << "----- Timings -----" << endl;
-        // cout << "Average execution time: " << averageTotalTime.count() << "ms" << endl;
-        // cout << "Average simulation computation time: " << averageSimTime.count() << "ms" << endl;
-        // cout << "Average frame time: " << averageSimTime.count() / (SIM_TIME / TIMESTEP) << "ms" << endl;
+        cout << "----- Timings -----" << endl;
+        cout << "Average execution time: " << averageTotalTime.count() << "ms" << endl;
+        cout << "Average simulation computation time: " << averageSimTime.count() << "ms" << endl;
+        cout << "Average frame time: " << averageSimTime.count() / (SIM_TIME / TIMESTEP) << "ms" << endl;
         cout << "===== End Profiling =====" << endl;
         cout << endl;
 

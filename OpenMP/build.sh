@@ -7,6 +7,8 @@ then
     echo "Cleaning build files"
     rm -r CMakeFiles
     rm cmake_install.cmake CMakeCache.txt Makefile particleSim
+else
+    echo ""
 fi
 
 cmake ../

@@ -21,6 +21,9 @@ class Particle {
         Particle(float x, float y, float radius, float mass);  // Construct with initial position
         Particle(float x, float y, float dx, float dy, float radius, float mass);  // Construct with initial position and velocity
 
+        int particleNum;
+        bool hasCollided = false;
+
         float get_x() {return x;}
         float get_y() {return y;}
         float get_dx() {return dx;}

@@ -27,10 +27,10 @@ using namespace std;
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
-#define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
+#define MULTIPLE_SIMS false  // Enable batch running multiple simulations one after another
 #define NUM_NEW_PARTICLES 100  // Number of particles to add after each sim
 #define MAX_PARTICLES 2000  // Maximum number of particles allowed
-#define REPEAT_SIM 5  // Number of time to run the same sim for averaging
+#define REPEAT_SIM 1  // Number of time to run the same sim for averaging
 
 int main() {
     #if OUTPUT_ENABLED
