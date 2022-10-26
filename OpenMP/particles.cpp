@@ -100,7 +100,7 @@ void Particles::updateGrid() {
 
     // Empty grid and add particles
     uint i, j, k;
-    #pragma omp parallel private(i, j) num_threads(16)
+    #pragma omp parallel private(i, j) num_threads(64)
     {
         #pragma omp for
         for (i = 0; i < numRows; i++) {
@@ -136,6 +136,7 @@ void Particles::updateGrid() {
 
 void Particles::updateCollisions() {
     uint i, j;
+    #pragma omp parallel for private(i, j) num_threads(64)
     for (i = 0; i < numRows; i++) {
         auto row = rows.at(i);
         for (j = 0; j < numRows; j++) {
@@ -147,7 +148,6 @@ void Particles::updateCollisions() {
                         auto p2 = &(particles.at(i2));
                         if (i1 != i2 && !p1->hasCollided && !p2->hasCollided) {
                             if (checkCollision(p1, p2)) {
-                                std::cout << "goated" << std::endl;
                                 // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
                                 float newXVel1 = (p1->get_dx() * (p1->get_mass() - p2->get_mass()) + (2 * p2->get_mass() * p2->get_dx())) / (p1->get_mass() + p2->get_mass());
                                 float newXVel2 = (p2->get_dx() * (p2->get_mass() - p1->get_mass()) + (2 * p1->get_mass() * p1->get_dx())) / (p1->get_mass() + p2->get_mass());
