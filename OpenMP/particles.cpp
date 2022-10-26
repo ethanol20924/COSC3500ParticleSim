@@ -18,12 +18,12 @@ Particles::Particles(SimConfig_t *config) {
     this->width = config->simWidth;
     this->height = config->simHeight;
 
-    uint numParticles = config->numParticles;
+    this->numParticles = config->numParticles;
     float particleSize = config->particleSize;
     float particleMass = config->particleMass;
     float maxSpeed = config->maxSpeed;
 
-    for (uint i = 0; i < numParticles; i++) {
+    for (uint i = 0; i < this->numParticles; i++) {
         bool intersecting = true;
         while (intersecting) {
             float x = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(width - 2 * particleSize)));
@@ -60,7 +60,7 @@ Particles::Particles(SimConfig_t *config) {
     this->gridHeight = height / numRows;
     this->gridWidth = width / numCols;
 
-    std::cout << this->numRows << std::endl;
+    // std::cout << this->numRows << std::endl;
 
     // Generate Grid
     for (uint i = 0; i < this->numRows; i++) {
@@ -99,44 +99,55 @@ void Particles::updateGrid() {
     // TODO: write changes into a "dirty" object then copy over
 
     // Empty grid and add particles
-    uint i, j;
-    // #pragma omp parallel private(i, j) num_threads(16)
+    uint i, j, k;
+    #pragma omp parallel private(i, j) num_threads(16)
     {
-        // #pragma omp for
+        #pragma omp for
         for (i = 0; i < numRows; i++) {
             auto row = rows.at(i);
-            auto bufRow = buffer.at(i);
+            auto bufRow = &(buffer.at(i));
             float gridY = gridHeight * (i + 0.5);
-            // #pragma omp for
-            for (j = 0; i < numCols; j++) {
-                auto cell = row.cells.at(i);
-                auto bufCell = bufRow.cells.at(i);
+            for (j = 0; j < numCols; j++) {
+                auto cell = row.cells.at(j);
+                auto bufCell = &(bufRow->cells.at(j));
                 float gridX = gridWidth * (cell.cellNum + 0.5);
-                bufCell.elements.clear();
-                // #pragma omp for
-                for (auto & p : particles) {
+                bufCell->elements.clear();
+                for (k = 0; k < numParticles; k++) {
+                    auto p = particles.at(k);
                     // Check if AABB intersects with grid
                     if (checkAABBRect(p.get_x(), p.get_y(), p.get_radius(), p.get_radius(), gridX, gridY, 0.5 * gridWidth, 0.5 * gridHeight)) {
-                        bufCell.elements.push_back(p.particleNum);
+                        bufCell->elements.push_back(p.particleNum);
                     }
                 }
             }
         }
     }
 
-    rows = buffer;
+    for (i = 0; i < numRows; i++) {
+        auto row = &(rows.at(i));
+        auto bufRow = buffer.at(i);
+        for (j = 0; j < numCols; j++) {
+            auto cell = &(row->cells.at(j));
+            auto bufCell = bufRow.cells.at(j);
+            cell->elements = bufCell.elements;
+        }
+    }
 }
 
 void Particles::updateCollisions() {
-    for (auto & row : rows) {
-        for (auto & cell : row.cells) {
+    uint i, j;
+    for (i = 0; i < numRows; i++) {
+        auto row = rows.at(i);
+        for (j = 0; j < numRows; j++) {
+            auto cell = row.cells.at(j);
             if (cell.elements.size() > 1) {
-                for (int i : cell.elements) {
-                    auto p1 = &(particles.at(i));
-                    for (int j : cell.elements) {
-                        auto p2 = &(particles.at(j));
-                        if (i != j && !p1->hasCollided && !p2->hasCollided) {
+                for (int i1 : cell.elements) {
+                    auto p1 = &(particles.at(i1));
+                    for (int i2 : cell.elements) {
+                        auto p2 = &(particles.at(i2));
+                        if (i1 != i2 && !p1->hasCollided && !p2->hasCollided) {
                             if (checkCollision(p1, p2)) {
+                                std::cout << "goated" << std::endl;
                                 // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
                                 float newXVel1 = (p1->get_dx() * (p1->get_mass() - p2->get_mass()) + (2 * p2->get_mass() * p2->get_dx())) / (p1->get_mass() + p2->get_mass());
                                 float newXVel2 = (p2->get_dx() * (p2->get_mass() - p1->get_mass()) + (2 * p1->get_mass() * p1->get_dx())) / (p1->get_mass() + p2->get_mass());

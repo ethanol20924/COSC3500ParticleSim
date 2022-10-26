@@ -49,6 +49,8 @@ class Particles {
         vector<GridRow> rows;  // Vector of rows
         vector<GridRow> buffer;  // Dirty buffer to allow for parallelism
 
+        uint numParticles;
+
         float timeStep;
         float currentTime = 0;
 
