@@ -42,3 +42,9 @@
 *.cmake
 */CMakeCache.txt
 */Makefile
+
+# CLion istg
+*.ninja
+*.iml
+*.log
+*.cbp

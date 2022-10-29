@@ -24,13 +24,13 @@ using namespace std;
 #define OUTPUT_ENABLED false  // Enable or disable JSON serialisation
 #define OUTPUT_FILENAME "../out/test.json"
 
-#define COUT_TO_FILE true  // Note: we can specify outputs with SLURM script
+#define COUT_TO_FILE false  // Note: we can specify outputs with SLURM script
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
 #define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
 #define NUM_NEW_PARTICLES 500  // Number of particles to add after each sim
-#define MAX_PARTICLES 10000  // Maximum number of particles allowed
+#define MAX_PARTICLES 1000  // Maximum number of particles allowed
 #define REPEAT_SIM 5  // Number of time to run the same sim for averaging
 
 int main() {
@@ -126,6 +126,8 @@ int main() {
         cout << "Number of particles: " << num_particles << endl;
         cout << "Width: " << BOX_WIDTH << "m" << endl;
         cout << "Height: " << BOX_HEIGHT << "m" << endl;
+        cout << "Grid Width: " << static_cast<float>(BOX_WIDTH) / static_cast<float>(NUM_ROWS) << "m" << endl;
+        cout << "Grid Height: " << static_cast<float>(BOX_HEIGHT) / static_cast<float>(NUM_ROWS) << "m" << endl;
         cout << "Timestep: " << TIMESTEP << "s" << endl;
         cout << "Simulation time: " << SIM_TIME << "s" << endl;
         cout << "Frames per run: " << (SIM_TIME / TIMESTEP) << endl;
