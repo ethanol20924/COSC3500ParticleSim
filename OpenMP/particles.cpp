@@ -96,8 +96,6 @@ void Particles::updateTime() {
 }
 
 void Particles::updateGrid() {
-    // TODO: write changes into a "dirty" object then copy over
-
     // Empty grid and add particles
     uint i, j, k;
     #pragma omp parallel private(i, j) num_threads(64)

@@ -9,6 +9,9 @@
 #include <fstream>
 using namespace std;
 
+#define MAX_PARTICLES_PER_CELL 4
+#define NUM_THREADS 256
+
 /**
  * @brief Config structure for simulation initialisation
  * 
@@ -17,26 +20,10 @@ struct SimConfig_t {
     uint numParticles;
     float simWidth;
     float simHeight;
-    uint gridWidth;  // not actually width, it's a count
-    uint gridHeight;
     float particleSize;
     float particleMass;
     float maxSpeed;
     float timeStep;
-};
-
-struct Cell {
-    uint cellNum;
-    vector<uint> elements;  // Vector of particles overlapping the cell. Contains the index of the particle in the 'particles' vector
-};
-
-/**
- * @brief Structure representing each grid row
- * 
- */
-struct GridRow {
-    uint rowNum;
-    vector<Cell> cells;  // Stores all the cells in said row
 };
 
 /**
@@ -45,9 +32,15 @@ struct GridRow {
  */
 class Particles {
     private:
-        vector<Particle> particles;  // Vector of particles. We will use this to prevent doubled up collisions
-        vector<GridRow> rows;  // Vector of rows
-        vector<GridRow> buffer;  // Dirty buffer to allow for parallelism
+        uint *blankCounters;  // Host side blank counter
+        uint *gridCounters;  // array storing the number of particles in a cell
+
+        uint *blankCells;  // Host side cells
+        uint *gridCells;  // array storing the indexes of the particles in each cell, max 4 particles per cell
+
+        vector<Particle> particles;
+        float *temp_particles  // same as below
+        float *d_particles;  // format: x, y, dx, dy
 
         uint numParticles;
 
@@ -57,11 +50,7 @@ class Particles {
         float width;
         float height;
 
-        uint numRows;
-        uint numCols;
-
-        float gridWidth;
-        float gridHeight;
+        float gridSize;
 
     public:
         Particles();

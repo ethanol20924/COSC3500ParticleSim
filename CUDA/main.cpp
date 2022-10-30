@@ -9,7 +9,7 @@ using namespace std;
 #include "libs/cereal/archives/json.hpp"
 
 // INITIAL SIM SETUP PARAMS
-#define NUM_PARTICLES 500
+#define NUM_PARTICLES 100
 #define BOX_WIDTH 2  // m
 #define BOX_HEIGHT 2  // m
 #define NUM_ROWS 100  // m
@@ -21,14 +21,14 @@ using namespace std;
 #define PARTICLE_MASS 0.1  // kg
 #define MAX_PARTICLE_SPEED 0.25  // m/s
 
-#define OUTPUT_ENABLED false  // Enable or disable JSON serialisation
+#define OUTPUT_ENABLED true  // Enable or disable JSON serialisation
 #define OUTPUT_FILENAME "../out/test.json"
 
 #define COUT_TO_FILE false  // Note: we can specify outputs with SLURM script
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
-#define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
+#define MULTIPLE_SIMS false  // Enable batch running multiple simulations one after another
 #define NUM_NEW_PARTICLES 500  // Number of particles to add after each sim
 #define MAX_PARTICLES 1000  // Maximum number of particles allowed
 #define REPEAT_SIM 5  // Number of time to run the same sim for averaging
