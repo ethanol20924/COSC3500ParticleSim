@@ -39,10 +39,15 @@ class Particles {
         uint *gridCells;  // array storing the indexes of the particles in each cell, max 4 particles per cell
 
         vector<Particle> particles;
-        float *temp_particles  // same as below
+        float *temp_particles;  // same as below
         float *d_particles;  // format: x, y, dx, dy
 
+        float *newVels;  // array for holding new velocities
+        float *blankVels;  // blanks
+
         uint numParticles;
+        float particleMass;
+        float particleSize;
 
         float timeStep;
         float currentTime = 0;

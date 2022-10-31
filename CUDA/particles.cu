@@ -20,8 +20,8 @@ Particles::Particles(SimConfig_t *config) {
     this->height = config->simHeight;
 
     this->numParticles = config->numParticles;
-    float particleSize = config->particleSize;
-    float particleMass = config->particleMass;
+    this->particleSize = config->particleSize;
+    this->particleMass = config->particleMass;
     float maxSpeed = config->maxSpeed;
 
     temp_particles = new float[this->numParticles * 4]();
@@ -29,11 +29,11 @@ Particles::Particles(SimConfig_t *config) {
     for (uint i = 0; i < this->numParticles; i++) {
         bool intersecting = true;
         while (intersecting) {
-            float x = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(width - 2 * particleSize)));
-            float y = particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(height - 2 * particleSize)));
+            float x = this->particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(width - 2 * this->particleSize)));
+            float y = this->particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(height - 2 * this->particleSize)));
             float dx = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
             float dy = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
-            Particle *newParticle = new Particle(x, y, dx, dy, particleSize, particleMass);
+            Particle *newParticle = new Particle(x, y, dx, dy, this->particleSize, this->particleMass);
             newParticle->particleNum = i;
 
             if (particles.empty()) {
@@ -85,6 +85,10 @@ Particles::Particles(SimConfig_t *config) {
     // Allocate blank grid host side
     blankCounters = new uint[this->numRows * this->numCols]();
     blankCells = new uint[this->numRows * this->numCols * MAX_PARTICLES_PER_CELL]();
+
+    // Allocate velocity buffers
+    cudaMalloc((void **)&newVels, sizeof(float) * this->numParticles * 2);
+    blankVels = new float[this->numParticles * 2]();
 }
 
 /**
@@ -106,8 +110,8 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
     atomicInc(&counters[gridY * cols + gridX]);
     for (uint i = 0; i < 4; i++) {
         __threadfence();
-        if (cells[gridY * cols + gridX] == 0) {
-            cells[gridY * cols + gridX] = particle;
+        if (cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] == 0) {
+            cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] = particle + 1;
             break;
         }
     }
@@ -120,65 +124,115 @@ void Particles::updateGrid() {
     d_updateGrid<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, this->particleSize, this->numCols);
 }
 
-__global__ d_updateCollisions(float *particles, uint *counters, uint *cells, float size) {
+__global__ void d_updateCollisions(float *particles, uint *counters, uint *cells, float *vels, float size, float mass) {
     uint particle = blockIdx.x * blockDim.x + threadIdx.x;
 
     // Check current cell
-    uint gridX = floor(particles[particle * 4] / size);
-    uint gridY = floor(particles[particle * 4 + 1] / size);
+    float x1 = particles[particle * 4];
+    float y1 = particles[particle * 4 + 1];
+    uint gridX = floor(x1 / size);
+    uint gridY = floor(y1 / size);
 
+    // Variables to determine which quadrant of the cell the particle is in
     int addX = particles[particle * 4] >= size * (gridX + 0.5) ? 1 : -1;
     int addY = particles[particle * 4 + 1] >= size * (gridY + 0.5) ? 1 : -1;
 
+    // Variables for the other particle
+    uint otherParticle;
+    float x2, y2;
+
+    bool collided = false;
+
     __threadfence();
-    if (counters[gridY * cols + gridX] != 0) {
-        // do stuff
-    } else if (counters[gridY * cols + gridX + addX] != 0) {
-        // do more stuff
-    } else if (counters[(gridY + addY) * cols + gridX] != 0) {
-        // do even more stuff
-    } else if (counters[(gridY + addY) * cols + gridX + addX] != 0) {
-        // do even even more stuff
+    if (counters[gridY * cols + gridX] > 1 && !collided) {
+        for (uint i = 0; i < 4; i++) {
+            otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1
+            if (otherParticle == 0) {
+                break;
+            } else {
+                x2 = particles[otherParticle * 4];
+                y2 = particles[otherParticle * 4 + 1];
+                collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+            }
+
+            if (collided) {
+                break;
+            }
+        }
+    } 
+    
+    if (counters[gridY * cols + gridX + addX] > 1 && !collided) {
+        for (uint i = 0; i < 4; i++) {
+            otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1
+            if (otherParticle == 0) {
+                break;
+            } else {
+                x2 = particles[otherParticle * 4];
+                y2 = particles[otherParticle * 4 + 1];
+                collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+            }
+
+            if (collided) {
+                break;
+            }
+        }
+    }
+    
+    if (counters[(gridY + addY) * cols + gridX] > 1 && !collided) {
+        for (uint i = 0; i < 4; i++) {
+            otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1
+            if (otherParticle == 0) {
+                break;
+            } else {
+                x2 = particles[otherParticle * 4];
+                y2 = particles[otherParticle * 4 + 1];
+                collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+            }
+
+            if (collided) {
+                break;
+            }
+        }
+    }
+    
+    if (counters[(gridY + addY) * cols + gridX + addX] > 1 && !collided) {
+        for (uint i = 0; i < 4; i++) {
+            otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1
+            if (otherParticle == 0) {
+                break;
+            } else {
+                x2 = particles[otherParticle * 4];
+                y2 = particles[otherParticle * 4 + 1];
+                collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+            }
+
+            if (collided) {
+                break;
+            }
+        }
     }
 
-    
+    // Resolve collision
+    if (collided) {
+        float dx2 = particles[otherParticle * 4 + 2];
+        float dy2 = particles[otherParticle * 4 + 3];
+
+        vels[particle * 2] = (2 * mass * dx2) / (2 * mass);
+        vels[particle * 2 + 1] = (2 * mass * dy2) / (2 * mass);
+    }
+}
+
+__device__ bool d_checkCollision(float x1, float y1, float x2, float y2, float r) {
+    return x1 + 2 * r > x2
+        && x1 < x2 + 2 * r
+        && y1 + 2 * r > y2
+        && y1 < y2 + 2 * r;
 }
 
 void Particles::updateCollisions() {
+    cudaMemcpy(newVels, blankVels, sizeof(float) * this->numParticles * 2, cudaMemcpyHostToDevice);
 
-
-    // uint i, j;
-    // for (i = 0; i < numRows; i++) {
-    //     auto row = rows.at(i);
-    //     for (j = 0; j < numRows; j++) {
-    //         auto cell = row.cells.at(j);
-    //         if (cell.elements.size() > 1) {
-    //             for (int i1 : cell.elements) {
-    //                 auto p1 = &(particles.at(i1));
-    //                 for (int i2 : cell.elements) {
-    //                     auto p2 = &(particles.at(i2));
-    //                     if (i1 != i2 && !p1->hasCollided && !p2->hasCollided) {
-    //                         if (checkCollision(p1, p2)) {
-    //                             // https://gamedevelopment.tutsplus.com/tutorials/when-worlds-collide-simulating-circle-circle-collisions--gamedev-769
-    //                             float newXVel1 = (p1->get_dx() * (p1->get_mass() - p2->get_mass()) + (2 * p2->get_mass() * p2->get_dx())) / (p1->get_mass() + p2->get_mass());
-    //                             float newXVel2 = (p2->get_dx() * (p2->get_mass() - p1->get_mass()) + (2 * p1->get_mass() * p1->get_dx())) / (p1->get_mass() + p2->get_mass());
-    //                             float newYVel1 = (p1->get_dy() * (p1->get_mass() - p2->get_mass()) + (2 * p2->get_mass() * p2->get_dy())) / (p1->get_mass() + p2->get_mass());
-    //                             float newYVel2 = (p2->get_dy() * (p2->get_mass() - p1->get_mass()) + (2 * p1->get_mass() * p1->get_dy())) / (p1->get_mass() + p2->get_mass());
-
-    //                             p1->set_dx(newXVel1);
-    //                             p2->set_dx(newXVel2);
-    //                             p1->set_dy(newYVel1);
-    //                             p2->set_dy(newYVel2);
-
-    //                             p1->hasCollided = true;
-    //                             p2->hasCollided = true;
-    //                         }
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    d_updateCollisions<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, newVels, this->particleSize, this->particleMass);
 }
 
 void Particles::updateMovements() {
