@@ -52,6 +52,9 @@ class Particles {
         float timeStep;
         float currentTime = 0;
 
+        uint numRows;
+        uint numCols;
+
         float width;
         float height;
 

@@ -17,7 +17,7 @@ using namespace std;
 
 #define SIM_TIME 5  // s
 
-#define PARTICLE_SIZE 0.001  // m
+#define PARTICLE_SIZE 0.01  // m
 #define PARTICLE_MASS 0.1  // kg
 #define MAX_PARTICLE_SPEED 0.25  // m/s
 
@@ -31,7 +31,7 @@ using namespace std;
 #define MULTIPLE_SIMS false  // Enable batch running multiple simulations one after another
 #define NUM_NEW_PARTICLES 500  // Number of particles to add after each sim
 #define MAX_PARTICLES 1000  // Maximum number of particles allowed
-#define REPEAT_SIM 5  // Number of time to run the same sim for averaging
+#define REPEAT_SIM 1  // Number of time to run the same sim for averaging
 
 int main() {
     #if OUTPUT_ENABLED
@@ -69,8 +69,6 @@ int main() {
 			simConfig->simHeight = BOX_HEIGHT;
 			simConfig->particleSize = PARTICLE_SIZE;
 			simConfig->particleMass = PARTICLE_MASS;
-			simConfig->gridWidth = NUM_ROWS;
-			simConfig->gridHeight = NUM_ROWS;
 			simConfig->maxSpeed = MAX_PARTICLE_SPEED;
 			simConfig->timeStep = TIMESTEP;
 

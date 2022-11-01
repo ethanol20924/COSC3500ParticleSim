@@ -107,7 +107,7 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
     uint gridY = floor(particles[particle * 4 + 1] / size);
 
     // Add to counter and cell
-    atomicInc(&counters[gridY * cols + gridX]);
+    atomicAdd(&counters[gridY * cols + gridX], 1);
     for (uint i = 0; i < 4; i++) {
         __threadfence();
         if (cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] == 0) {
@@ -124,7 +124,14 @@ void Particles::updateGrid() {
     d_updateGrid<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, this->particleSize, this->numCols);
 }
 
-__global__ void d_updateCollisions(float *particles, uint *counters, uint *cells, float *vels, float size, float mass) {
+__device__ bool d_checkCollision(float x1, float y1, float x2, float y2, float r) {
+    return x1 + 2 * r > x2
+        && x1 < x2 + 2 * r
+        && y1 + 2 * r > y2
+        && y1 < y2 + 2 * r;
+}
+
+__global__ void d_updateCollisions(float *particles, uint *counters, uint *cells, float *vels, float size, float mass, uint cols) {
     uint particle = blockIdx.x * blockDim.x + threadIdx.x;
 
     // Check current cell
@@ -146,7 +153,7 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
     __threadfence();
     if (counters[gridY * cols + gridX] > 1 && !collided) {
         for (uint i = 0; i < 4; i++) {
-            otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1
+            otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
             if (otherParticle == 0) {
                 break;
             } else {
@@ -163,7 +170,7 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
     
     if (counters[gridY * cols + gridX + addX] > 1 && !collided) {
         for (uint i = 0; i < 4; i++) {
-            otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1
+            otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1;
             if (otherParticle == 0) {
                 break;
             } else {
@@ -180,7 +187,7 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
     
     if (counters[(gridY + addY) * cols + gridX] > 1 && !collided) {
         for (uint i = 0; i < 4; i++) {
-            otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1
+            otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
             if (otherParticle == 0) {
                 break;
             } else {
@@ -197,7 +204,7 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
     
     if (counters[(gridY + addY) * cols + gridX + addX] > 1 && !collided) {
         for (uint i = 0; i < 4; i++) {
-            otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1
+            otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1;
             if (otherParticle == 0) {
                 break;
             } else {
@@ -222,35 +229,47 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
     }
 }
 
-__device__ bool d_checkCollision(float x1, float y1, float x2, float y2, float r) {
-    return x1 + 2 * r > x2
-        && x1 < x2 + 2 * r
-        && y1 + 2 * r > y2
-        && y1 < y2 + 2 * r;
-}
-
 void Particles::updateCollisions() {
     cudaMemcpy(newVels, blankVels, sizeof(float) * this->numParticles * 2, cudaMemcpyHostToDevice);
 
-    d_updateCollisions<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, newVels, this->particleSize, this->particleMass);
+    d_updateCollisions<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, newVels, this->particleSize, this->particleMass, this->numCols);
+}
+
+__global__ void d_updateMovements(float *particles, float *vels, float timeStep, float width, float radius) {
+    uint particle = blockIdx.x * blockDim.x + threadIdx.x;
+
+    float dx = vels[particle * 2];
+    float dy = vels[particle * 2 + 1];
+
+    float x = particles[particle * 4];
+    float y = particles[particle * 4 + 1];
+
+    if (x < radius || x > width - radius) {
+        dx *= -1;
+    }
+    if (y < radius || y > width - radius) {
+        dy *= -1;
+    }
+
+    particles[particle * 4] += dx * timeStep;
+    particles[particle * 4 + 1] += dy * timeStep;
+    particles[particle * 4 + 2] = dx;
+    particles[particle * 4 + 3] = dy;
 }
 
 void Particles::updateMovements() {
-    vector<Particle>::iterator it;
-    for (it = particles.begin(); it != particles.end(); it++) {
-        float x = it->get_x();
-        float y = it->get_y();
-        float radius = it->get_radius();
+    d_updateMovements<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, newVels, this->timeStep, this->width, this->particleSize);
 
-        if (x < radius || x > width - radius) {
-            it->set_dx(-1 * it->get_dx());
-        }
-        if (y < radius || y > width - radius) {
-            it->set_dy(-1 * it->get_dy());
-        }
+    cudaMemcpy(temp_particles, d_particles, this->numParticles * 4, cudaMemcpyDeviceToHost);
 
-        it->update(timeStep);
-        it->hasCollided = false;
+    // Can we omp this lmao
+    for (uint i = 0; i < this->numParticles; i++) {
+        Particle *temp = &(particles.at(i));
+
+        temp->set_dx(temp_particles[i * 4 + 2]);
+        temp->set_dy(temp_particles[i * 4 + 3]);
+
+        temp->update(this->timeStep);
     }
 }
 
