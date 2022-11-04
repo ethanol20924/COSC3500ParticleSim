@@ -228,14 +228,6 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
         uint gridX = floor(x1 / size);
         uint gridY = floor(y1 / size);
 
-        // Variables to determine which quadrant of the cell the particle is in
-        int addX = particles[particle * DATA_PER_PARTICLE] >= size * (gridX + 0.5) ? 1 : -1;
-        int addY = particles[particle * DATA_PER_PARTICLE + 1] >= size * (gridY + 0.5) ? 1 : -1;
-
-        #if DEBUG_COLLISION
-        printf("Particle: %d; addX: %d; addY: %d\n", particle, addX, addY);
-        #endif
-
         // Variables for the other particle
         int otherParticle;
         float x2, y2;
@@ -266,12 +258,12 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
             }
         } 
         
-        if (!collided && gridX + addX < cols) {
+        if (!collided && gridX + 1 < cols) {
             #if DEBUG_COLLISION
-            printf("Particle %d checking cell %d, %d\n", particle, gridX + addX, gridY);
+            printf("Particle %d checking cell %d, %d\n", particle, gridX + 1, gridY);
             #endif
             for (uint i = 0; i < 4; i++) {
-                otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1;
+                otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX + 1) * MAX_PARTICLES_PER_CELL + i] - 1;
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
@@ -290,12 +282,60 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
             }
         }
         
-        if (!collided && gridY + addY < cols) {
+        if (!collided && gridX - 1 < cols) {
             #if DEBUG_COLLISION
-            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY + addY);
+            printf("Particle %d checking cell %d, %d\n", particle, gridX - 1, gridY);
             #endif
             for (uint i = 0; i < 4; i++) {
-                otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
+                otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX - 1) * MAX_PARTICLES_PER_CELL + i] - 1;
+                if (otherParticle == -1) {
+                    break;
+                } else if (particle == otherParticle) {
+                    continue;
+                } else {
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
+                    collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+                }
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
+                if (collided) {
+                    break;
+                }
+            }
+        }
+
+        if (!collided && gridY + 1 < cols) {
+            #if DEBUG_COLLISION
+            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY + 1);
+            #endif
+            for (uint i = 0; i < 4; i++) {
+                otherParticle = cells[(gridY + 1) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
+                if (otherParticle == -1) {
+                    break;
+                } else if (particle == otherParticle) {
+                    continue;
+                } else {
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
+                    collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+                }
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
+                if (collided) {
+                    break;
+                }
+            }
+        }
+
+        if (!collided && gridY - 1 < cols) {
+            #if DEBUG_COLLISION
+            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY - 1);
+            #endif
+            for (uint i = 0; i < 4; i++) {
+                otherParticle = cells[(gridY - 1) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
@@ -314,12 +354,84 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
             }
         }
         
-        if (!collided && gridX + addX < cols && gridY + addY < cols) {
+        if (!collided && gridX + 1 < cols && gridY + 1 < cols) {
             #if DEBUG_COLLISION
-            printf("Particle %d checking cell %d, %d\n", particle, gridX + addX, gridY + addY);
+            printf("Particle %d checking cell %d, %d\n", particle, gridX + 1, gridY + 1);
             #endif
             for (uint i = 0; i < 4; i++) {
-                otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1;
+                otherParticle = cells[(gridY + 1) * cols * MAX_PARTICLES_PER_CELL + (gridX + 1) * MAX_PARTICLES_PER_CELL + i] - 1;
+                if (otherParticle == -1) {
+                    break;
+                } else if (particle == otherParticle) {
+                    continue;
+                } else {
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
+                    collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+                }
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
+                if (collided) {
+                    break;
+                }
+            }
+        }
+
+        if (!collided && gridX - 1 < cols && gridY + 1 < cols) {
+            #if DEBUG_COLLISION
+            printf("Particle %d checking cell %d, %d\n", particle, gridX - 1, gridY + 1);
+            #endif
+            for (uint i = 0; i < 4; i++) {
+                otherParticle = cells[(gridY + 1) * cols * MAX_PARTICLES_PER_CELL + (gridX - 1) * MAX_PARTICLES_PER_CELL + i] - 1;
+                if (otherParticle == -1) {
+                    break;
+                } else if (particle == otherParticle) {
+                    continue;
+                } else {
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
+                    collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+                }
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
+                if (collided) {
+                    break;
+                }
+            }
+        }
+
+        if (!collided && gridX + 1 < cols && gridY - 1 < cols) {
+            #if DEBUG_COLLISION
+            printf("Particle %d checking cell %d, %d\n", particle, gridX + 1, gridY - 1);
+            #endif
+            for (uint i = 0; i < 4; i++) {
+                otherParticle = cells[(gridY - 1) * cols * MAX_PARTICLES_PER_CELL + (gridX + 1) * MAX_PARTICLES_PER_CELL + i] - 1;
+                if (otherParticle == -1) {
+                    break;
+                } else if (particle == otherParticle) {
+                    continue;
+                } else {
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
+                    collided = d_checkCollision(x1, y1, x2, y2, size / 2);
+                }
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
+                if (collided) {
+                    break;
+                }
+            }
+        }
+
+        if (!collided && gridX - 1 < cols && gridY - 1 < cols) {
+            #if DEBUG_COLLISION
+            printf("Particle %d checking cell %d, %d\n", particle, gridX - 1, gridY - 1);
+            #endif
+            for (uint i = 0; i < 4; i++) {
+                otherParticle = cells[(gridY - 1) * cols * MAX_PARTICLES_PER_CELL + (gridX - 1) * MAX_PARTICLES_PER_CELL + i] - 1;
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
@@ -411,6 +523,10 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
         particles[particle * DATA_PER_PARTICLE + 3] = dy;
 
         #if DEBUG_MOVEMENT
+        printf("Particle %d set to %f, %f\n", particle, particles[particle * DATA_PER_PARTICLE], particles[particle * DATA_PER_PARTICLE + 1]);
+        #endif
+
+        #if DEBUG_MOVEMENT
         printf("End update movements for particle %d\n", particle);
         #endif
     }
@@ -419,14 +535,19 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
 void Particles::updateMovements() {
     d_updateMovements<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, newVels, this->timeStep, this->width, this->particleSize, this->numParticles);
 
-    CHECK_CUDA_ERROR(cudaMemcpy(temp_particles, d_particles, this->numParticles * DATA_PER_PARTICLE, cudaMemcpyDeviceToHost));
+    CHECK_CUDA_ERROR(cudaMemcpy(temp_particles, d_particles, sizeof(float) * this->numParticles * DATA_PER_PARTICLE, cudaMemcpyDeviceToHost));
 
     // Can we omp this lmao
     for (uint i = 0; i < this->numParticles; i++) {
         Particle *temp = &(particles.at(i));
 
-        temp->set_x(temp_particles[i * DATA_PER_PARTICLE]);
-        temp->set_y(temp_particles[i * DATA_PER_PARTICLE + 1]);
+        float x = temp_particles[i * DATA_PER_PARTICLE];
+        float y = temp_particles[i * DATA_PER_PARTICLE + 1];
+
+        std::cout << temp->get_x() << "," << temp->get_y() << "->" << x << "," << y << std::endl;
+
+        temp->set_x(x);
+        temp->set_y(y);
 
         // temp->update(this->timeStep);
     }
