@@ -11,8 +11,9 @@ using namespace std;
 
 #define MAX_PARTICLES_PER_CELL 4
 #define NUM_THREADS 10
+#define DATA_PER_PARTICLE 4
 
-#define DEBUG_GRID false
+#define DEBUG_GRID true
 #define DEBUG_COLLISION true
 #define DEBUG_MOVEMENT true
 

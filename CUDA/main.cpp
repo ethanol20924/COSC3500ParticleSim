@@ -19,7 +19,7 @@ using namespace std;
 #define PARTICLE_SIZE 0.2  // m
 #define PARTICLE_MASS 0.1  // kg
 #define MIN_PARTICLE_SPEED 0.2  // m/s
-#define MAX_PARTICLE_SPEED 0.5  // m/s
+#define MAX_PARTICLE_SPEED 1  // m/s
 
 #define OUTPUT_ENABLED true  // Enable or disable JSON serialisation
 #define OUTPUT_FILENAME "../out/test.json"

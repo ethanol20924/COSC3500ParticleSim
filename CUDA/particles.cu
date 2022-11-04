@@ -5,24 +5,39 @@
 #include <immintrin.h>
 #include <cuda.h>
 
-// https://stackoverflow.com/questions/25791133/cuda-atomic-lock-threads-in-sequence
-struct Lock{
-    int *mutex;
-    Lock(void){
-      int state = 0;
-      cudaMalloc((void**) &mutex, sizeof(int));
-      cudaMemcpy(mutex, &state, sizeof(int), cudaMemcpyHostToDevice);
+// ================================================================== //
+
+// https://leimao.github.io/blog/Proper-CUDA-Error-Checking/
+#define CHECK_CUDA_ERROR(val) check((val), #val, __FILE__, __LINE__)
+template <typename T>
+void check(T err, const char* const func, const char* const file,
+           const int line)
+{
+    if (err != cudaSuccess)
+    {
+        std::cerr << "CUDA Runtime Error at: " << file << ":" << line
+                  << std::endl;
+        std::cerr << cudaGetErrorString(err) << " " << func << std::endl;
+        // We don't exit when we encounter CUDA errors in this example.
+        // std::exit(EXIT_FAILURE);
     }
-    ~Lock(void){
-      cudaFree(mutex);
+}
+
+#define CHECK_LAST_CUDA_ERROR() checkLast(__FILE__, __LINE__)
+void checkLast(const char* const file, const int line)
+{
+    cudaError_t err{cudaGetLastError()};
+    if (err != cudaSuccess)
+    {
+        std::cerr << "CUDA Runtime Error at: " << file << ":" << line
+                  << std::endl;
+        std::cerr << cudaGetErrorString(err) << std::endl;
+        // We don't exit when we encounter CUDA errors in this example.
+        // std::exit(EXIT_FAILURE);
     }
-    __device__ void lock(uint compare){
-      while(atomicCAS(mutex, compare, 0xFFFFFFFF) != compare);    //0xFFFFFFFF is just a very large number. The point is no block index can be this big (currently).
-    }
-    __device__ void unlock(uint val){
-      atomicExch(mutex, val+1);
-    }
-  };
+}
+
+// ================================================================== //
 
 Particles::Particles() {
     this->timeStep = 0.0f;
@@ -42,17 +57,16 @@ Particles::Particles(SimConfig_t *config) {
     this->particleSize = config->particleSize;
     this->particleMass = config->particleMass;
     float maxSpeed = config->maxSpeed;
-    float minSpeed = config->minSpeed;
 
-    temp_particles = new float[this->numParticles * 4]();
+    temp_particles = new float[this->numParticles * DATA_PER_PARTICLE]();
 
     for (uint i = 0; i < this->numParticles; i++) {
         bool intersecting = true;
         while (intersecting) {
             float x = this->particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(this->width - 2 * this->particleSize)));
             float y = this->particleSize + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(this->height - 2 * this->particleSize)));
-            float dx = (minSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(maxSpeed - minSpeed)))) * (-1 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2))));
-            float dy = minSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(maxSpeed - minSpeed))) * (-1 + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2))));
+            float dx = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
+            float dy = -maxSpeed + static_cast <float> (rand()) /( static_cast <float> (RAND_MAX/(2 * maxSpeed)));
             Particle *newParticle = new Particle(x, y, dx, dy, this->particleSize, this->particleMass);
             newParticle->particleNum = i;
 
@@ -60,10 +74,10 @@ Particles::Particles(SimConfig_t *config) {
                 intersecting = false;
                 particles.push_back(*newParticle);
 
-                temp_particles[i * 4] = newParticle->get_x();
-                temp_particles[i * 4 + 1] = newParticle->get_y();
-                temp_particles[i * 4 + 2] = newParticle->get_dx();
-                temp_particles[i * 4 + 3] = newParticle->get_dy();
+                temp_particles[i * DATA_PER_PARTICLE] = newParticle->get_x();
+                temp_particles[i * DATA_PER_PARTICLE + 1] = newParticle->get_y();
+                temp_particles[i * DATA_PER_PARTICLE + 2] = newParticle->get_dx();
+                temp_particles[i * DATA_PER_PARTICLE + 3] = newParticle->get_dy();
             } else {
                 bool isIntersecting = false;
                 vector<Particle>::iterator it;
@@ -76,10 +90,10 @@ Particles::Particles(SimConfig_t *config) {
                     intersecting = false;
                     particles.push_back(*newParticle);
 
-                    temp_particles[i * 4] = newParticle->get_x();
-                    temp_particles[i * 4 + 1] = newParticle->get_y();
-                    temp_particles[i * 4 + 2] = newParticle->get_dx();
-                    temp_particles[i * 4 + 3] = newParticle->get_dy();
+                    temp_particles[i * DATA_PER_PARTICLE] = newParticle->get_x();
+                    temp_particles[i * DATA_PER_PARTICLE + 1] = newParticle->get_y();
+                    temp_particles[i * DATA_PER_PARTICLE + 2] = newParticle->get_dx();
+                    temp_particles[i * DATA_PER_PARTICLE + 3] = newParticle->get_dy();
                 } else {
                     delete newParticle;
                 }
@@ -97,8 +111,8 @@ Particles::Particles(SimConfig_t *config) {
     }
 
     // Allocate device particle storage
-    cudaMalloc((void **)&d_particles, sizeof(float) * this->numParticles * 4); 
-    cudaMemcpy(d_particles, temp_particles, sizeof(float) * this->numParticles * 4, cudaMemcpyHostToDevice);
+    CHECK_CUDA_ERROR(cudaMalloc((void **)&d_particles, sizeof(float) * this->numParticles * DATA_PER_PARTICLE));
+    CHECK_CUDA_ERROR(cudaMemcpy(d_particles, temp_particles, sizeof(float) * this->numParticles * DATA_PER_PARTICLE, cudaMemcpyHostToDevice));
 
     this->gridSize = config->particleSize * 2;
 
@@ -108,15 +122,15 @@ Particles::Particles(SimConfig_t *config) {
     // std::cout << this->numRows << std::endl;
 
     // Allocate grid
-    cudaMalloc((void **)&gridCounters, sizeof(uint) * this->numRows * this->numCols);
-    cudaMalloc((void **)&gridCells, sizeof(uint) * this->numRows * this->numCols * MAX_PARTICLES_PER_CELL);
+    CHECK_CUDA_ERROR(cudaMalloc((void **)&gridCounters, sizeof(uint) * this->numRows * this->numCols));
+    CHECK_CUDA_ERROR(cudaMalloc((void **)&gridCells, sizeof(uint) * this->numRows * this->numCols * MAX_PARTICLES_PER_CELL));
 
     // Allocate blank grid host side
     blankCounters = new uint[this->numRows * this->numCols]();
     blankCells = new uint[this->numRows * this->numCols * MAX_PARTICLES_PER_CELL]();
 
     // Allocate velocity buffers
-    cudaMalloc((void **)&newVels, sizeof(float) * this->numParticles * 2);
+    CHECK_CUDA_ERROR(cudaMalloc((void **)&newVels, sizeof(float) * this->numParticles * 2));
     blankVels = new float[this->numParticles * 2]();
 }
 
@@ -128,18 +142,18 @@ void Particles::updateTime() {
     this->currentTime += this->timeStep;
 }
 
-__global__ void d_updateGrid(float *particles, uint *counters, uint *cells, float size, uint cols, uint numParticles, Lock lock) {
+__global__ void d_updateGrid(float *particles, uint *counters, uint *cells, float size, uint cols, uint numParticles) {
     uint particle = blockIdx.x * blockDim.x + threadIdx.x;
 
     if (particle < numParticles) {
         #if DEBUG_GRID
         printf("Start update grid for particle %d\n", particle);
-        printf("Particle %d; X: %f; Y: %f; dX: %f; dY: %f\n", particle, particles[particle * 4], particles[particle * 4 + 1], particles[particle * 4 + 2], particles[particle * 4 + 3]);
+        printf("Particle %d; X: %f; Y: %f; dX: %f; dY: %f\n", particle, particles[particle * DATA_PER_PARTICLE], particles[particle * DATA_PER_PARTICLE + 1], particles[particle * 4 + 2], particles[particle * 4 + 3]);
         #endif
 
         // Figure out which grid we're in
-        uint gridX = floor(particles[particle * 4] / size);
-        uint gridY = floor(particles[particle * 4 + 1] / size);
+        uint gridX = floor(particles[particle * DATA_PER_PARTICLE] / size);
+        uint gridY = floor(particles[particle * DATA_PER_PARTICLE + 1] / size);
 
         #if DEBUG_GRID
         printf("Particle %d at; X: %d; Y: %d\n", particle, gridX, gridY);
@@ -188,12 +202,10 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
 }
 
 void Particles::updateGrid() {
-    cudaMemcpy(gridCounters, blankCounters, sizeof(uint) * this->numRows * this->numCols, cudaMemcpyHostToDevice);
-    cudaMemcpy(gridCells, blankCells, sizeof(uint) * this->numRows * this->numCols * MAX_PARTICLES_PER_CELL, cudaMemcpyHostToDevice);
+    CHECK_CUDA_ERROR(cudaMemcpy(gridCounters, blankCounters, sizeof(uint) * this->numRows * this->numCols, cudaMemcpyHostToDevice));
+    CHECK_CUDA_ERROR(cudaMemcpy(gridCells, blankCells, sizeof(uint) * this->numRows * this->numCols * MAX_PARTICLES_PER_CELL, cudaMemcpyHostToDevice));
 
-    Lock lock;
-
-    d_updateGrid<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, this->gridSize, this->numCols, this->numParticles, lock);
+    d_updateGrid<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, this->gridSize, this->numCols, this->numParticles);
 }
 
 __device__ bool d_checkCollision(float x1, float y1, float x2, float y2, float r) {
@@ -211,34 +223,17 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
         printf("Start update collision for particle %d\n", particle);
         #endif
         // Check current cell
-        float x1 = particles[particle * 4];
-        float y1 = particles[particle * 4 + 1];
+        float x1 = particles[particle * DATA_PER_PARTICLE];
+        float y1 = particles[particle * DATA_PER_PARTICLE + 1];
         uint gridX = floor(x1 / size);
         uint gridY = floor(y1 / size);
 
         // Variables to determine which quadrant of the cell the particle is in
-        int addX = particles[particle * 4] >= size * (gridX + 0.5) ? 1 : -1;
-        int addY = particles[particle * 4 + 1] >= size * (gridY + 0.5) ? 1 : -1;
-
-        printf("Particle: %d; addX: %d; addY: %d\n", particle, addX, addY);
+        int addX = particles[particle * DATA_PER_PARTICLE] >= size * (gridX + 0.5) ? 1 : -1;
+        int addY = particles[particle * DATA_PER_PARTICLE + 1] >= size * (gridY + 0.5) ? 1 : -1;
 
         #if DEBUG_COLLISION
-        if (particle == 0) {
-            for (uint x = 0; x < cols; x++) {
-                for (uint y = 0; y < cols; y++) {
-                    printf("%d particle(s) at %d, %d: ", counters[y * cols + x], x, y);
-                    for (uint z = 0; z < MAX_PARTICLES_PER_CELL; z++) {
-                        int e = cells[y * cols * MAX_PARTICLES_PER_CELL + x * MAX_PARTICLES_PER_CELL + z] - 1;
-                        if (e == -1) {
-                            break;
-                        } else {
-                            printf("%d; ", e);
-                        }
-                    }
-                    printf("\n");
-                }
-            }
-        }
+        printf("Particle: %d; addX: %d; addY: %d\n", particle, addX, addY);
         #endif
 
         // Variables for the other particle
@@ -251,96 +246,92 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
             #if DEBUG_COLLISION
             printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY);
             #endif
-            for (uint i = 0; i < 4; i++) {
+            for (uint i = 0; i < DATA_PER_PARTICLE; i++) {
                 otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
-                #if DEBUG_COLLISION
-                printf("Particle %d checking %d\n", particle, otherParticle);
-                #endif
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
                     continue;
                 } else {
-                    x2 = particles[otherParticle * 4];
-                    y2 = particles[otherParticle * 4 + 1];
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
                     collided = d_checkCollision(x1, y1, x2, y2, size / 2);
                 }
-
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
                 if (collided) {
                     break;
                 }
             }
         } 
         
-        if (!collided) {
+        if (!collided && gridX + addX < cols) {
             #if DEBUG_COLLISION
-            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY);
+            printf("Particle %d checking cell %d, %d\n", particle, gridX + addX, gridY);
             #endif
             for (uint i = 0; i < 4; i++) {
                 otherParticle = cells[gridY * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1;
-                #if DEBUG_COLLISION
-                printf("Particle %d checking %d\n", particle, otherParticle);
-                #endif
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
                     continue;
                 } else {
-                    x2 = particles[otherParticle * 4];
-                    y2 = particles[otherParticle * 4 + 1];
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
                     collided = d_checkCollision(x1, y1, x2, y2, size / 2);
                 }
-
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
                 if (collided) {
                     break;
                 }
             }
         }
         
-        if (!collided) {
+        if (!collided && gridY + addY < cols) {
             #if DEBUG_COLLISION
-            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY);
+            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY + addY);
             #endif
             for (uint i = 0; i < 4; i++) {
                 otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] - 1;
-                #if DEBUG_COLLISION
-                printf("Particle %d checking %d\n", particle, otherParticle);
-                #endif
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
                     continue;
                 } else {
-                    x2 = particles[otherParticle * 4];
-                    y2 = particles[otherParticle * 4 + 1];
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
                     collided = d_checkCollision(x1, y1, x2, y2, size / 2);
                 }
-
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
                 if (collided) {
                     break;
                 }
             }
         }
         
-        if (!collided) {
+        if (!collided && gridX + addX < cols && gridY + addY < cols) {
             #if DEBUG_COLLISION
-            printf("Particle %d checking cell %d, %d\n", particle, gridX, gridY);
+            printf("Particle %d checking cell %d, %d\n", particle, gridX + addX, gridY + addY);
             #endif
             for (uint i = 0; i < 4; i++) {
                 otherParticle = cells[(gridY + addY) * cols * MAX_PARTICLES_PER_CELL + (gridX + addX) * MAX_PARTICLES_PER_CELL + i] - 1;
-                #if DEBUG_COLLISION
-                printf("Particle %d checking %d\n", particle, otherParticle);
-                #endif
                 if (otherParticle == -1) {
                     break;
                 } else if (particle == otherParticle) {
                     continue;
                 } else {
-                    x2 = particles[otherParticle * 4];
-                    y2 = particles[otherParticle * 4 + 1];
+                    x2 = particles[otherParticle * DATA_PER_PARTICLE];
+                    y2 = particles[otherParticle * DATA_PER_PARTICLE + 1];
                     collided = d_checkCollision(x1, y1, x2, y2, size / 2);
                 }
-
+                #if DEBUG_COLLISION
+                printf("Particle %d checking %d\n", particle, otherParticle);
+                #endif
                 if (collided) {
                     break;
                 }
@@ -353,14 +344,14 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
             printf("Particle %d collided with %d\n", particle, otherParticle);
             #endif
 
-            float dx2 = particles[otherParticle * 4 + 2];
-            float dy2 = particles[otherParticle * 4 + 3];
+            float dx2 = particles[otherParticle * DATA_PER_PARTICLE + 2];
+            float dy2 = particles[otherParticle * DATA_PER_PARTICLE + 3];
 
             vels[particle * 2] = (2 * mass * dx2) / (2 * mass);
             vels[particle * 2 + 1] = (2 * mass * dy2) / (2 * mass);
         } else {
-            vels[particle * 2] = particles[particle * 4 + 2];
-            vels[particle * 2 + 1] = particles[particle * 4 + 3];
+            vels[particle * 2] = particles[particle * DATA_PER_PARTICLE + 2];
+            vels[particle * 2 + 1] = particles[particle * DATA_PER_PARTICLE + 3];
         }
 
         #if DEBUG_COLLISION
@@ -371,7 +362,7 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
 }
 
 void Particles::updateCollisions() {
-    cudaMemcpy(newVels, blankVels, sizeof(float) * this->numParticles * 2, cudaMemcpyHostToDevice);
+    CHECK_CUDA_ERROR(cudaMemcpy(newVels, blankVels, sizeof(float) * this->numParticles * 2, cudaMemcpyHostToDevice));
 
     d_updateCollisions<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, newVels, this->gridSize, this->particleMass, this->numCols, this->numParticles);
 }
@@ -391,8 +382,8 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
         printf("Particle %d initially at; dX: %f; dY: %f\n", particle, dx, dy);
         #endif
 
-        float x = particles[particle * 4];
-        float y = particles[particle * 4 + 1];
+        float x = particles[particle * DATA_PER_PARTICLE];
+        float y = particles[particle * DATA_PER_PARTICLE + 1];
 
         if (x < radius || x > width - radius) {
             dx *= -1;
@@ -407,10 +398,17 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
             #endif
         }
 
-        particles[particle * 4] += dx * timeStep;
-        particles[particle * 4 + 1] += dy * timeStep;
-        particles[particle * 4 + 2] = dx;
-        particles[particle * 4 + 3] = dy;
+        float newX = particles[particle * DATA_PER_PARTICLE] + dx * timeStep;
+        float newY = particles[particle * DATA_PER_PARTICLE + 1] + dy * timeStep;
+
+        #if DEBUG_MOVEMENT
+        printf("Particle %d moved from %f, %f to %f, %f\n", particle, particles[particle * DATA_PER_PARTICLE], particles[particle * DATA_PER_PARTICLE + 1], newX, newY);
+        #endif
+
+        particles[particle * DATA_PER_PARTICLE] = newX;
+        particles[particle * DATA_PER_PARTICLE + 1] = newY;
+        particles[particle * DATA_PER_PARTICLE + 2] = dx;
+        particles[particle * DATA_PER_PARTICLE + 3] = dy;
 
         #if DEBUG_MOVEMENT
         printf("End update movements for particle %d\n", particle);
@@ -421,14 +419,14 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
 void Particles::updateMovements() {
     d_updateMovements<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, newVels, this->timeStep, this->width, this->particleSize, this->numParticles);
 
-    cudaMemcpy(temp_particles, d_particles, this->numParticles * 4, cudaMemcpyDeviceToHost);
+    CHECK_CUDA_ERROR(cudaMemcpy(temp_particles, d_particles, this->numParticles * DATA_PER_PARTICLE, cudaMemcpyDeviceToHost));
 
     // Can we omp this lmao
     for (uint i = 0; i < this->numParticles; i++) {
         Particle *temp = &(particles.at(i));
 
-        temp->set_x(temp_particles[i * 4]);
-        temp->set_y(temp_particles[i * 4 + 1]);
+        temp->set_x(temp_particles[i * DATA_PER_PARTICLE]);
+        temp->set_y(temp_particles[i * DATA_PER_PARTICLE + 1]);
 
         // temp->update(this->timeStep);
     }
