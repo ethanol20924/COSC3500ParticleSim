@@ -9,17 +9,17 @@ using namespace std;
 #include "libs/cereal/archives/json.hpp"
 
 // INITIAL SIM SETUP PARAMS
-#define NUM_PARTICLES 100
+#define NUM_PARTICLES 10
 #define BOX_WIDTH 2  // m
 #define BOX_HEIGHT 2  // m
-#define NUM_ROWS 100  // m
 #define TIMESTEP 0.01  // s
 
 #define SIM_TIME 5  // s
 
-#define PARTICLE_SIZE 0.01  // m
+#define PARTICLE_SIZE 0.2  // m
 #define PARTICLE_MASS 0.1  // kg
-#define MAX_PARTICLE_SPEED 0.25  // m/s
+#define MIN_PARTICLE_SPEED 0.2  // m/s
+#define MAX_PARTICLE_SPEED 0.5  // m/s
 
 #define OUTPUT_ENABLED true  // Enable or disable JSON serialisation
 #define OUTPUT_FILENAME "../out/test.json"
@@ -69,6 +69,7 @@ int main() {
 			simConfig->simHeight = BOX_HEIGHT;
 			simConfig->particleSize = PARTICLE_SIZE;
 			simConfig->particleMass = PARTICLE_MASS;
+			simConfig->minSpeed = MIN_PARTICLE_SPEED;
 			simConfig->maxSpeed = MAX_PARTICLE_SPEED;
 			simConfig->timeStep = TIMESTEP;
 
@@ -83,7 +84,7 @@ int main() {
 
 			for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
 				auto frameStart = chrono::steady_clock::now();
-
+				cout << "========== Frame: " << frames << " ==========" << endl;
 				particles->updateGrid();
 				particles->updateCollisions();
 				particles->updateMovements();
@@ -124,8 +125,6 @@ int main() {
         cout << "Number of particles: " << num_particles << endl;
         cout << "Width: " << BOX_WIDTH << "m" << endl;
         cout << "Height: " << BOX_HEIGHT << "m" << endl;
-        cout << "Grid Width: " << static_cast<float>(BOX_WIDTH) / static_cast<float>(NUM_ROWS) << "m" << endl;
-        cout << "Grid Height: " << static_cast<float>(BOX_HEIGHT) / static_cast<float>(NUM_ROWS) << "m" << endl;
         cout << "Timestep: " << TIMESTEP << "s" << endl;
         cout << "Simulation time: " << SIM_TIME << "s" << endl;
         cout << "Frames per run: " << (SIM_TIME / TIMESTEP) << endl;

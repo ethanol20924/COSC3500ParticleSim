@@ -24,13 +24,15 @@ class Particle {
         int particleNum;
         bool hasCollided = false;
 
-        float get_x() {return x;}
-        float get_y() {return y;}
-        float get_dx() {return dx;}
-        float get_dy() {return dy;}
-        float get_mass() { return mass;}
-        float get_radius() { return radius;}
+        float get_x() { return x; }
+        float get_y() { return y; }
+        float get_dx() { return dx; }
+        float get_dy() { return dy; }
+        float get_mass() { return mass; }
+        float get_radius() { return radius; }
 
+        void set_x(float x) { this->x = x; }
+        void set_y(float y) { this->y = y; }
         void set_dx(float dx) { this->dx = dx; }
         void set_dy(float dy) { this->dy = dy; }
 

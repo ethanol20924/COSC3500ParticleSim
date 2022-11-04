@@ -10,7 +10,11 @@
 using namespace std;
 
 #define MAX_PARTICLES_PER_CELL 4
-#define NUM_THREADS 256
+#define NUM_THREADS 10
+
+#define DEBUG_GRID false
+#define DEBUG_COLLISION true
+#define DEBUG_MOVEMENT true
 
 /**
  * @brief Config structure for simulation initialisation
@@ -22,6 +26,7 @@ struct SimConfig_t {
     float simHeight;
     float particleSize;
     float particleMass;
+    float minSpeed;
     float maxSpeed;
     float timeStep;
 };
