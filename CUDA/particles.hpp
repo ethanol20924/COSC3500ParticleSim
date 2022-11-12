@@ -10,12 +10,12 @@
 using namespace std;
 
 #define MAX_PARTICLES_PER_CELL 4
-#define NUM_THREADS 10
+#define NUM_THREADS 1
 #define DATA_PER_PARTICLE 4
 
 #define DEBUG_GRID false
 #define DEBUG_COLLISION false
-#define DEBUG_MOVEMENT true
+#define DEBUG_MOVEMENT false
 
 /**
  * @brief Config structure for simulation initialisation
@@ -50,6 +50,9 @@ class Particles {
 
         float *newVels;  // array for holding new velocities
         float *blankVels;  // blanks
+
+        bool *inGridFlags;  // used for allocating particle to grid
+        bool *blankFlags;
 
         uint numParticles;
         float particleMass;

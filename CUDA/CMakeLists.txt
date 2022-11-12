@@ -10,6 +10,6 @@ target_compile_features(particleSim PUBLIC cxx_std_11)
 set_target_properties(particleSim PROPERTIES CUDA_SEPARABLE_COMPILATION ON)
 target_link_libraries(particleSim)
 
-add_compile_options(-std=c++11 -Wextra -Werror -Wall -pedantic -O3)
+add_compile_options(-std=c++11 -Wextra -Werror -Wall -pedantic -O3 -g -G -deviceemu)
 
 include_directories(${CMAKE_SOURCE_DIR}/libs)

@@ -101,15 +101,6 @@ Particles::Particles(SimConfig_t *config) {
         }
     }
 
-    std::cout << "Initial particle states:" << std::endl;
-    for (uint i = 0; i < this->numParticles; i++) {
-        std::cout << "Particle " << i << "; ";
-        std::cout << "X: " << temp_particles[i * 4] << "; ";
-        std::cout << "Y: " << temp_particles[i * 4 + 1] << "; ";
-        std::cout << "dX: " << temp_particles[i * 4 + 2] << "; ";
-        std::cout << "dY: " << temp_particles[i * 4 + 3] << std::endl;
-    }
-
     // Allocate device particle storage
     CHECK_CUDA_ERROR(cudaMalloc((void **)&d_particles, sizeof(float) * this->numParticles * DATA_PER_PARTICLE));
     CHECK_CUDA_ERROR(cudaMemcpy(d_particles, temp_particles, sizeof(float) * this->numParticles * DATA_PER_PARTICLE, cudaMemcpyHostToDevice));
@@ -144,8 +135,10 @@ void Particles::updateTime() {
 
 __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, float size, uint cols, uint numParticles) {
     uint particle = blockIdx.x * blockDim.x + threadIdx.x;
+    // printf("%d\n", blockDim.x);
 
     if (particle < numParticles) {
+        // printf("s: %d\n", particle);
         #if DEBUG_GRID
         printf("Start update grid for particle %d\n", particle);
         printf("Particle %d; X: %f; Y: %f; dX: %f; dY: %f\n", particle, particles[particle * DATA_PER_PARTICLE], particles[particle * DATA_PER_PARTICLE + 1], particles[particle * 4 + 2], particles[particle * 4 + 3]);
@@ -160,23 +153,29 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
         #endif
 
         // Add to counter and cell
-        atomicAdd(&counters[gridY * cols + gridX], 1);
-        bool in_array = false;
-        do {
-            for (uint i = 0; i < MAX_PARTICLES_PER_CELL; i++) {
-                uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i];
-                if (*cell == 0) {
-                    *cell = particle + 1;
-                    break;
-                }
-            }
+        int idx = atomicAdd(&counters[gridY * cols + gridX], 1);
+        uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + idx];
+        *cell = particle + 1;
+        // __syncthreads();
+        // bool in_array = false;
+        // do {
+        //     for (uint i = 0; i < MAX_PARTICLES_PER_CELL; i++) {
+        //         uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i];
+        //         // printf("0x%08x\n", cell);
+        //         if (*cell == 0) {
+        //             *cell = particle + 1;
+        //             break;
+        //         }
+        //     }
             
-            for (uint i = 0; i < MAX_PARTICLES_PER_CELL; i++) {
-                if (cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] == particle + 1) {
-                    in_array = true;
-                }
-            }
-        } while (!in_array);
+        //     for (uint i = 0; i < MAX_PARTICLES_PER_CELL; i++) {
+        //         if (cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] == particle + 1) {
+        //             in_array = true;
+        //         }
+        //     }
+        //     // printf("%d looking\n", particle);
+        // } while (!in_array);
+        // printf("a: %d\n", particle);
 
         #if DEBUG_GRID
         if (particle == 0) {
@@ -198,6 +197,7 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
 
         printf("End update grid for particle %d\n", particle);
         #endif
+        // printf("e: %d\n", particle);
     }
 }
 
@@ -206,13 +206,15 @@ void Particles::updateGrid() {
     CHECK_CUDA_ERROR(cudaMemcpy(gridCells, blankCells, sizeof(uint) * this->numRows * this->numCols * MAX_PARTICLES_PER_CELL, cudaMemcpyHostToDevice));
 
     d_updateGrid<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, this->gridSize, this->numCols, this->numParticles);
+    CHECK_LAST_CUDA_ERROR();
 }
 
 __device__ bool d_checkCollision(float x1, float y1, float x2, float y2, float r) {
-    return x1 + 2 * r > x2
-        && x1 < x2 + 2 * r
-        && y1 + 2 * r > y2
-        && y1 < y2 + 2 * r;
+    if (x1 + 2 * r > x2 && x1 < x2 + 2 * r && y1 + 2 * r > y2 && y1 < y2 + 2 * r) {
+        float distance = sqrtf((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+        return distance < 2 * r;
+    }
+    return false;
 }
 
 __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells, float *vels, float size, float mass, uint cols, uint numParticles) {
@@ -475,8 +477,9 @@ __global__ void d_updateCollisions(float *particles, uint *counters, uint *cells
 
 void Particles::updateCollisions() {
     CHECK_CUDA_ERROR(cudaMemcpy(newVels, blankVels, sizeof(float) * this->numParticles * 2, cudaMemcpyHostToDevice));
-
+    
     d_updateCollisions<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, gridCounters, gridCells, newVels, this->gridSize, this->particleMass, this->numCols, this->numParticles);
+    CHECK_LAST_CUDA_ERROR();
 }
 
 __global__ void d_updateMovements(float *particles, float *vels, float timeStep, float width, float radius, uint numParticles) {
@@ -523,10 +526,6 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
         particles[particle * DATA_PER_PARTICLE + 3] = dy;
 
         #if DEBUG_MOVEMENT
-        printf("Particle %d set to %f, %f\n", particle, particles[particle * DATA_PER_PARTICLE], particles[particle * DATA_PER_PARTICLE + 1]);
-        #endif
-
-        #if DEBUG_MOVEMENT
         printf("End update movements for particle %d\n", particle);
         #endif
     }
@@ -534,6 +533,7 @@ __global__ void d_updateMovements(float *particles, float *vels, float timeStep,
 
 void Particles::updateMovements() {
     d_updateMovements<<<(this->numParticles + NUM_THREADS - 1) / NUM_THREADS, NUM_THREADS>>>(d_particles, newVels, this->timeStep, this->width, this->particleSize, this->numParticles);
+    CHECK_LAST_CUDA_ERROR();
 
     CHECK_CUDA_ERROR(cudaMemcpy(temp_particles, d_particles, sizeof(float) * this->numParticles * DATA_PER_PARTICLE, cudaMemcpyDeviceToHost));
 
@@ -543,8 +543,6 @@ void Particles::updateMovements() {
 
         float x = temp_particles[i * DATA_PER_PARTICLE];
         float y = temp_particles[i * DATA_PER_PARTICLE + 1];
-
-        std::cout << temp->get_x() << "," << temp->get_y() << "->" << x << "," << y << std::endl;
 
         temp->set_x(x);
         temp->set_y(y);

@@ -1,0 +1,3910 @@
+Particle 0; X: 1.5443; Y: 0.831013; dX: 0.566198; dY: 0.59688
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 2, 2
+Particle 0 checking 7
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 3, 1
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 collided with 8
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 collided with 8
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 collided with 8
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 collided with 8
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 collided with 8
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 collided with 8
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 collided with 7
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 collided with 7
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 collided with 7
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 7
+Particle 0 collided with 7
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking 6
+Particle 0 collided with 6
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: 0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking 8
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: 0.119791; dY: -0.760150
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.119791; dY: -0.760150
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 collided with 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 4
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking 6
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 collided with 9
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking 9
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 2
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 2
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 4, 1
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 3, 1
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking 8
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 collided with 9
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 4, 2
+Particle 0 checking 9
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 3, 2
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: 0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: 0.566198; dY: -0.596880
+Particle 0 checking cell 4, 4
+Particle 0 checking cell 3, 4
+Particle 0 checking cell 4, 3
+Particle 0 checking cell 3, 3
+Particle 0 set to; dX: -0.566198; dY: -0.596880

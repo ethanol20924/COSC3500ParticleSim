@@ -2,4 +2,4 @@ cd build
 module load cmake gnu cuda
 cmake ../
 make
-./particleSim | tee ../out/profile.txt
+cuda-memcheck ./particleSim | tee ../out/heehee.txt

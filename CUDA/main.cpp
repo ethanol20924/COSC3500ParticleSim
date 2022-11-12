@@ -9,14 +9,14 @@ using namespace std;
 #include "libs/cereal/archives/json.hpp"
 
 // INITIAL SIM SETUP PARAMS
-#define NUM_PARTICLES 10
+#define NUM_PARTICLES 1000
 #define BOX_WIDTH 2  // m
 #define BOX_HEIGHT 2  // m
-#define TIMESTEP 0.01  // s
+#define TIMESTEP 0.001  // s
 
-#define SIM_TIME 5  // s
+#define SIM_TIME 1  // s
 
-#define PARTICLE_SIZE 0.2  // m
+#define PARTICLE_SIZE 0.01  // m
 #define PARTICLE_MASS 0.1  // kg
 #define MIN_PARTICLE_SPEED 0.2  // m/s
 #define MAX_PARTICLE_SPEED 1  // m/s
@@ -73,7 +73,11 @@ int main() {
 			simConfig->maxSpeed = MAX_PARTICLE_SPEED;
 			simConfig->timeStep = TIMESTEP;
 
+			cout << "STARTING SETUP" << endl;
+
 			Particles *particles = new Particles(simConfig);
+
+			cout << "FINISHED SETUP" << endl;
 
 			{
 			#if OUTPUT_ENABLED
