@@ -73,6 +73,8 @@ class Particles {
         Particles();
         Particles(SimConfig_t *config);
 
+        ~Particles();
+
         void updateTime();
         void updateGrid();
         void updateCollisions();

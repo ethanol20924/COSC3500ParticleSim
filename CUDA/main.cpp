@@ -28,10 +28,10 @@ using namespace std;
 #define PROFILE_FILENAME "../out/profile.txt"
 
 // REPEATED SIM SETUPS
-#define MULTIPLE_SIMS false  // Enable batch running multiple simulations one after another
-#define NUM_NEW_PARTICLES 500  // Number of particles to add after each sim
-#define MAX_PARTICLES 1000  // Maximum number of particles allowed
-#define REPEAT_SIM 1  // Number of time to run the same sim for averaging
+#define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
+#define NUM_NEW_PARTICLES 1000  // Number of particles to add after each sim
+#define MAX_PARTICLES 20000  // Maximum number of particles allowed
+#define REPEAT_SIM 5  // Number of time to run the same sim for averaging
 
 int main() {
     #if OUTPUT_ENABLED
@@ -73,11 +73,11 @@ int main() {
 			simConfig->maxSpeed = MAX_PARTICLE_SPEED;
 			simConfig->timeStep = TIMESTEP;
 
-			cout << "STARTING SETUP" << endl;
+			// cout << "STARTING SETUP" << endl;
 
 			Particles *particles = new Particles(simConfig);
 
-			cout << "FINISHED SETUP" << endl;
+			// cout << "FINISHED SETUP" << endl;
 
 			{
 			#if OUTPUT_ENABLED
@@ -88,7 +88,7 @@ int main() {
 
 			for (float time = 0.0f; time < SIM_TIME; time += TIMESTEP) {
 				auto frameStart = chrono::steady_clock::now();
-				cout << "========== Frame: " << frames << " ==========" << endl;
+				// cout << "========== Frame: " << frames << " ==========" << endl;
 				particles->updateGrid();
 				particles->updateCollisions();
 				particles->updateMovements();
@@ -108,6 +108,8 @@ int main() {
 			file.close();
 			#endif
 			}
+
+			delete particles;
 
 			auto progEnd = chrono::steady_clock::now();
 			auto totalTime = progEnd - progStart;

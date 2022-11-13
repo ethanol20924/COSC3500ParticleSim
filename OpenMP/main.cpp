@@ -9,17 +9,17 @@ using namespace std;
 #include "libs/cereal/archives/json.hpp"
 
 // INITIAL SIM SETUP PARAMS
-#define NUM_PARTICLES 500
+#define NUM_PARTICLES 1000
 #define BOX_WIDTH 2  // m
 #define BOX_HEIGHT 2  // m
-#define NUM_ROWS 100  // m
-#define TIMESTEP 0.01  // s
+#define NUM_ROWS 10  // m
+#define TIMESTEP 0.001  // s
 
-#define SIM_TIME 5  // s
+#define SIM_TIME 1  // s
 
-#define PARTICLE_SIZE 0.001  // m
+#define PARTICLE_SIZE 0.01  // m
 #define PARTICLE_MASS 0.1  // kg
-#define MAX_PARTICLE_SPEED 0.25  // m/s
+#define MAX_PARTICLE_SPEED 1  // m/s
 
 #define OUTPUT_ENABLED false  // Enable or disable JSON serialisation
 #define OUTPUT_FILENAME "../out/test.json"
@@ -29,8 +29,8 @@ using namespace std;
 
 // REPEATED SIM SETUPS
 #define MULTIPLE_SIMS true  // Enable batch running multiple simulations one after another
-#define NUM_NEW_PARTICLES 500  // Number of particles to add after each sim
-#define MAX_PARTICLES 1000  // Maximum number of particles allowed
+#define NUM_NEW_PARTICLES 1000  // Number of particles to add after each sim
+#define MAX_PARTICLES 20000  // Maximum number of particles allowed
 #define REPEAT_SIM 5  // Number of time to run the same sim for averaging
 
 int main() {

@@ -1,0 +1,16 @@
+===== Performance Profiling =====
+----- Simulation Settings -----
+Number of particles: 10
+Width: 2m
+Height: 2m
+Grid Width: 0.02m
+Grid Height: 0.02m
+Timestep: 0.001s
+Simulation time: 5s
+Frames per run: 5000
+----- Timings -----
+Average execution time: 567755ms
+Average simulation computation time: 567706ms
+Average frame time: 113.541ms
+===== End Profiling =====
+

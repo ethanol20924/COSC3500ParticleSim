@@ -175,6 +175,8 @@ void Particles::updateMovements() {
         float y = it->get_y();
         float radius = it->get_radius();
 
+        // std::cout << "Particle: " << std::distance(particles.begin(), it) << "; X: " << x << "; Y: " << y << std::endl;
+
         if (x < radius || x > width - radius) {
             it->set_dx(-1 * it->get_dx());
         }
@@ -217,9 +219,7 @@ bool Particles::checkCollision(Particle *p1, Particle *p2) {
             ((p1->get_x() - p2->get_x()) * (p1->get_x() - p2->get_x()))
             + ((p1->get_y() - p2->get_y()) * (p1->get_y() - p2->get_y()))
         );
-        if (distance < p1->get_radius() + p2->get_radius()) {
-            return true;
-        }
+        return distance < p1->get_radius() + p2->get_radius();
     }
     return false;
 }

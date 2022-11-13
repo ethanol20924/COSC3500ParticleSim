@@ -125,6 +125,16 @@ Particles::Particles(SimConfig_t *config) {
     blankVels = new float[this->numParticles * 2]();
 }
 
+Particles::~Particles() {
+    CHECK_CUDA_ERROR(cudaFree(gridCounters));
+    CHECK_CUDA_ERROR(cudaFree(gridCells));
+    CHECK_CUDA_ERROR(cudaFree(newVels));
+
+    delete [] blankCounters;
+    delete [] blankCells;
+    delete [] blankVels;
+}
+
 /**
  * @brief Increments the simulation by updating the current time.
  * 
@@ -154,28 +164,8 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
 
         // Add to counter and cell
         int idx = atomicAdd(&counters[gridY * cols + gridX], 1);
-        uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + idx];
+        uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + idx - 1];
         *cell = particle + 1;
-        // __syncthreads();
-        // bool in_array = false;
-        // do {
-        //     for (uint i = 0; i < MAX_PARTICLES_PER_CELL; i++) {
-        //         uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i];
-        //         // printf("0x%08x\n", cell);
-        //         if (*cell == 0) {
-        //             *cell = particle + 1;
-        //             break;
-        //         }
-        //     }
-            
-        //     for (uint i = 0; i < MAX_PARTICLES_PER_CELL; i++) {
-        //         if (cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + i] == particle + 1) {
-        //             in_array = true;
-        //         }
-        //     }
-        //     // printf("%d looking\n", particle);
-        // } while (!in_array);
-        // printf("a: %d\n", particle);
 
         #if DEBUG_GRID
         if (particle == 0) {

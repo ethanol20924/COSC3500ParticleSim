@@ -1,6 +1,7 @@
 cd build
 
 read -p "Full clean and build? " -n 1 -r
+echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo ""
