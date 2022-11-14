@@ -164,7 +164,7 @@ __global__ void d_updateGrid(float *particles, uint *counters, uint *cells, floa
 
         // Add to counter and cell
         int idx = atomicAdd(&counters[gridY * cols + gridX], 1);
-        uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + idx - 1];
+        uint *cell = &cells[gridY * cols * MAX_PARTICLES_PER_CELL + gridX * MAX_PARTICLES_PER_CELL + idx];
         *cell = particle + 1;
 
         #if DEBUG_GRID

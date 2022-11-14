@@ -98,43 +98,33 @@ void Particles::updateTime() {
 void Particles::updateGrid() {
     // Empty grid and add particles
     uint i, j, k;
-    #pragma omp parallel private(i, j) num_threads(64)
+    #pragma omp parallel private(i, j) num_threads(1)
     {
         #pragma omp for
         for (i = 0; i < numRows; i++) {
-            auto row = rows.at(i);
-            auto bufRow = &(buffer.at(i));
+            auto row = &(rows.at(i));
+            // auto bufRow = &(buffer.at(i));
             float gridY = gridHeight * (i + 0.5);
             for (j = 0; j < numCols; j++) {
-                auto cell = row.cells.at(j);
-                auto bufCell = &(bufRow->cells.at(j));
-                float gridX = gridWidth * (cell.cellNum + 0.5);
-                bufCell->elements.clear();
+                auto cell = &(row->cells.at(j));
+                // auto bufCell = &(bufRow->cells.at(j));
+                float gridX = gridWidth * (cell->cellNum + 0.5);
+                cell->elements.clear();
                 for (k = 0; k < numParticles; k++) {
                     auto p = particles.at(k);
                     // Check if AABB intersects with grid
                     if (checkAABBRect(p.get_x(), p.get_y(), p.get_radius(), p.get_radius(), gridX, gridY, 0.5 * gridWidth, 0.5 * gridHeight)) {
-                        bufCell->elements.push_back(p.particleNum);
+                        cell->elements.push_back(p.particleNum);
                     }
                 }
             }
-        }
-    }
-
-    for (i = 0; i < numRows; i++) {
-        auto row = &(rows.at(i));
-        auto bufRow = buffer.at(i);
-        for (j = 0; j < numCols; j++) {
-            auto cell = &(row->cells.at(j));
-            auto bufCell = bufRow.cells.at(j);
-            cell->elements = bufCell.elements;
         }
     }
 }
 
 void Particles::updateCollisions() {
     uint i, j;
-    #pragma omp parallel for private(i, j) num_threads(64)
+    #pragma omp parallel for private(i, j) num_threads(1)
     for (i = 0; i < numRows; i++) {
         auto row = rows.at(i);
         for (j = 0; j < numRows; j++) {
@@ -187,6 +177,24 @@ void Particles::updateMovements() {
         it->update(timeStep);
         it->hasCollided = false;
     }
+    // uint i;
+    // #pragma omp parallel for private(i) num_threads(64)
+    // for (i = 0; i < numParticles; i++) {
+    //     auto particle = &(particles.at(i));
+    //     float x = particle->get_x();
+    //     float y = particle->get_y();
+    //     float radius = particle->get_radius();
+
+    //     if (x < radius || x > width - radius) {
+    //         particle->set_dx(-1 * particle->get_dx());
+    //     }
+    //     if (y < radius || y > width - radius) {
+    //         particle->set_dy(-1 * particle->get_dy());
+    //     }
+
+    //     particle->update(timeStep);
+    //     particle->hasCollided = false;
+    // }
 }
 
 inline bool Particles::checkAABBCircle(float p1x, float p1y, float p1r, float p2x, float p2y, float p2r) {
