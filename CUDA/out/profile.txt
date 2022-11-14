@@ -7,8 +7,8 @@ Timestep: 0.001s
 Simulation time: 1s
 Frames per run: 1000
 ----- Timings -----
-Average execution time: 9546.62ms
-Average simulation computation time: 46.6566ms
-Average frame time: 0.0466566ms
+Average execution time: 1051.72ms
+Average simulation computation time: 896.184ms
+Average frame time: 0.896184ms
 ===== End Profiling =====
 
