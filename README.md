@@ -1,3 +1,7 @@
+# Particle Collision Simulation
+
+It sucks lmao. Runs on the Getafix cluster from UQ.
+
 Each folder contains it's own implementation. To build, go into the implementation folder and run ./build.sh. Type y/n depending on whether you want to clean or not.
 
 To run, use the ./run.sh script. 
